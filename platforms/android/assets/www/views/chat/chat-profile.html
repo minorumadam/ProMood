@@ -1,0 +1,39 @@
+<ion-view title="<span>Profile</span>"><ion-content class="profile-container"><div class="color-bar-title-striped-pink">{{$root.party.name}} <span class="help-icon-rounded-not-good bar-right-icon" ng-click="closeProfile()"><img src="svg/icon-rounded-close-2.svg"></span></div><ion-scroll has-bouncing="false" scroll="auto" class="height100 has-subheader" delegate-handle="profileScroll"><!-- <div class="row row-center">
+        	<div class="col col-center height100">
+            	<span class="profile"></span>
+            </div>
+        </div> --><!--
+        <div class="row row-bottom" ng-show="!isFriend()">
+        	<div class="col col-bottom">
+            	<h6 class="pink uppercase bottom-line" ng-click="addFriend()">Add As Friend</h6>
+            </div>
+        </div>
+        --><!-- <div class="row row-top">
+        	<div class="col col-top">
+            	<h5>Rated</h5>
+				<h2 style="font-size:38px; margin-top:0" class="button-style">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-half.svg" alt="&#189">
+
+                </h2>
+                <div class="profile">Michael has been awarded 4,5 stars as a ahelper by other users.</div><br>
+                <h4 class="profile uppercase bottom-line">&lsaquo;&lsaquo; Master Helper &rsaquo;&rsaquo;</h4>
+            </div>
+        </div> --><div class="row row-bottom"><div class="col chat-profile"><h6 class="uppercase">About {{$root.party.name}}</h6><div ng-show="$root.party.bornLocation">Was born in <strong>{{$root.party.bornLocation}}</strong></div><div ng-show="$root.party.location">Lives in <strong>{{$root.party.location}}</strong></div><div ng-show="$root.party.age">Is <strong>{{$root.party.age}}</strong> Years Old</div><div ng-show="$root.party.gender">Is a <strong>{{$root.party.gender}}</strong></div><div ng-show="$root.party.job">Works as <strong>{{$root.party.job}}</strong></div><div ng-show="$root.party.maritalStatus">Is <strong>{{$root.party.maritalStatus}}</strong></div><div ng-show="$root.party.hobbies">Hobbies <strong>{{$root.party.hobbies}}</strong></div><div ng-show="$root.party.quote">Quote <strong>{{$root.party.quote}}</strong></div><div ng-show="$root.party.words">Words <strong>{{$root.party.words}}</strong></div></div></div><!-- <div class="row row-center bottom-line" style="margin:20px 0;" ng-show="$root.party.words">
+         	<div class="col col-center">
+            	<h4 class="pink" style="margin:20px 0;">A Few Words</h4>
+                <p>{{$root.party.words}}</p>
+            </div>
+         </div> --><!--div class="row row-center bottom-line">
+         	<div class="col"></div>
+         	<div class="col col-center">
+            	<img class="svg" src="images/social-icons-circle-facebook.png">
+            </div>
+         	<div class="col col-center">
+            	<img class="svg" src="images/social-icons-circle-twitter.png">
+            </div>
+         	<div class="col"></div>
+        </div--><span ng-show="$root.party.personalityType"><div class="row row-top"><div class="col col-top"><h5>Personality Type</h5><h2 class="button-style">{{$root.party.personalityType}}</h2><quote class="profile">{{$root.party.personalityInfo.title}}</quote></div></div><div class="row row-top"><div class="col col-top bottom-line profile"><span ng-repeat="characteristic in $root.party.personalityInfo.characteristics track by $index" ng-show="characteristic &amp;&amp; (showFullCharacteristic || $index < 3)"><i class="icon icon-disc"></i>{{ characteristic }}</span></div></div><div class="row row-bottom bottom-line"><div class="col col-bottom"><h5 class="pink uppercase">{{$root.party.personalityInfo.most}}</h5><p class="pink tcenter" ng-click="showFullCharacteristics()">Tap here for the full description</p></div></div></span><div ng-show="$root.party.averageMood" class="row row-bottom"><div class="col col-bottom"><h5>Average Mood</h5><h2 style="font-weight:bold; margin-top:0" class="uppercase"><span id="avergaMoodText">{{$root.party.averageMood}}</span></h2></div></div><div ng-show="$root.party.averageMood" class="row row-center"><div class="col col-center"><div class="percentage-bar"><span style="width: {{ $root.party.feelings['not-so-good'] }}%">{{ $root.party.feelings['not-so-good'] }}%</span> <span style="width: {{ $root.party.feelings['not-so-bad'] }}%">{{ $root.party.feelings['not-so-bad'] }}%</span> <span style="width: {{ $root.party.feelings['good'] }}%">{{ $root.party.feelings['good'] }}%</span></div></div></div><div class="row row-bottom" ng-show="$root.party.achievements"><div class="col col-bottom"><h5>Achievements</h5></div></div><div class="row row-top" ng-repeat="achievement in $root.party.achievements track by $index"><div class="col col-top"><ul class="medals"><li>{{achievement.name}}</li></ul></div></div><div class="row last-row"></div></ion-scroll><div class="bar bar-footer margin0 padding0"><div class="col col-top margin0 padding0"><div class="bottom-bar-fixed"></div></div></div></ion-content></ion-view>

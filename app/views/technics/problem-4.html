@@ -1,0 +1,30 @@
+<div class="color-bar-blue-striped" style="margin-bottom:9px;">Step Four</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Choose the Best Idea</h5>
+    <p>These are the ideas you came up with. Take your time to study, review and evaluate them and once you've figured out which one is the best, just tap over it.</p>
+  </div>
+</div>
+
+
+<span ng-repeat="idea in problem.ideas">
+    <div class="row row-center custom-check fsize-small" ng-class="{'active':idea.selected}">
+      <div class="col-10">
+        {{$index + 1}}
+      </div>
+      <div class="col tleft" ng-click="problemSelectIdea($index)">
+        {{idea.name}}
+      </div>
+      <div class="col-10 tright">
+        <img ng-show="idea.selected" src="svg/ios-check.svg" alt="X" class="svg">
+      </div>
+    </div>
+    <!-- Se usa como separador -->
+        <div class="row row-center">
+        	<div class="col col-offset-10"></div>
+            <div class="col-10"></div>
+        </div>
+    <!-- Se usa como separador -->
+</span>
+<div class="row last-row"></div>
+

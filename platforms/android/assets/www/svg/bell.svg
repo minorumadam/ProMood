@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 123 121.5" enable-background="new 0 0 123 121.5" xml:space="preserve">
+<g id="PSD_Converted">
+	<g id="Bell_xA0_Image_1_">
+	</g>
+	<g id="smiley3_xA0_Image_1_">
+	</g>
+	<g id="smiley2_xA0_Image_1_">
+	</g>
+	<g id="smiley1_xA0_Image_1_">
+	</g>
+	<g id="Texto_1_">
+	</g>
+	<g id="line_xA0_Image_1_" opacity="0.4">
+	</g>
+	<g id="Logo_ProMood_xA0_Image_1_">
+	</g>
+	<g id="background_xA0_Image_1_">
+	</g>
+	<g id="Polygons_Tile_xA0_Image_1_">
+	</g>
+	<g id="Inner_Shadow_xA0_Image_1_">
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="442.3" y="-2565" width="640" height="3992">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="442.3" y="-2565" width="640" height="3992" id="Tests_xA0_Image_2_">
+	</mask>
+	<g id="Tests_xA0_Image_1_" mask="url(#Tests_xA0_Image_2_)">
+	</g>
+</g>
+<g id="VECTORES">
+	<g id="Tests_Image_VECTOR">
+	</g>
+	<g>
+		<path fill="#E6274C" d="M62,121.5c9.1,0,16.5-7.4,16.5-16.5H45.5C45.5,114.1,52.9,121.5,62,121.5z"/>
+		<path fill="#E6274C" d="M105,81.3c-3.3-7.9-2.5-34.2-2.5-34.2c0-19.8-14.2-36.3-33-39.8C69.3,3.2,66,0,62,0
+			c-4.1,0-7.4,3.2-7.5,7.3c-18.8,3.5-33,20-33,39.8c0,0,0.6,26.9-2.9,34.9C12.8,95,0,101.5,0,101.5h123C123,101.5,110,93.3,105,81.3
+			z"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,33 @@
+/* SASS Document */
+
+/* AUDIO PRACTICE */
+
+@media all and (max-height:481px) and (min-height:479px){
+
+		.gif {
+			left: calc(50% - 98px);
+			top: calc(50% - 76px);
+		}
+		.gif-bg{
+			left: calc(50% - 96px);
+			top: calc(50% - 77px);
+		}
+		.gif-bg-holder{
+			left: calc(50% - 101px);
+			top: calc(50% - 82px);
+		}
+		
+		/* BUFFER */
+		.cp-progress-holder{
+			left: calc(50% - 101px);
+			top: calc(50% - 82px);
+		}
+		
+		/* ending BUFFER */
+		.progress-time{
+			font-size:10vh;
+			left: calc(50% - 53px);
+			top: calc(50% + 117px);
+		}
+}
+/* ending audio practice iphone4 */

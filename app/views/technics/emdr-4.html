@@ -1,0 +1,37 @@
+<div class="color-bar-blue-striped">Step Four</div>
+<div class="col col-center">
+  <h5 class="violet">GOOD IMAGE</h5>
+</div>
+<div class="row row-bottom fsize-small">
+  <div class="col">
+    <p>Think again on that initial mental image that you built at the beginning of this process, and re-evaluate how disturbing is that image for you now.
+    <p></p>
+  </div>
+</div>
+<div class="row row-bottom margin-top-8">
+	<div class="col tcenter">
+    <p class="tcenter">Use the slider below:</p>
+  </div>
+</div>
+<div class="row-center padding0">
+
+  <div class="col emdr-range">
+    <div class="range range-positive pink">
+      <input style="margin:0;" type="range" value="8" max="10" min="0" name="volume" ng-model="emdr.imageSecondScore" ng-change="emdr.imageSecondScore = emdr.imageSecondScore">
+    </div>
+  </div>
+
+</div>
+<div class="row row-top emdr-slider">
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 0)}">0</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 1)}">1</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 2)}">2</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 3)}">3</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 4)}">4</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 5)}">5</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 6)}">6</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 7)}">7</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 8)}">8</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 9)}">9</div>
+  <div class="col margin0 padding0" ng-class="{'pink': (emdr.imageSecondScore == 10)}">10</div>
+</div>

@@ -1,0 +1,119 @@
+<ion-view title="<span>Profile</span>">
+  <ion-content>
+        <div class="color-bar-title-striped-pink">Michael<span></span>
+        	<span class="help-icon-rounded-not-good bar-right-icon"><img src="svg/icon-rounded-close-2.svg"></span>
+        </div>
+  	<ion-scroll scroll="auto" class="height100 has-subheader" delegate-handle="profileScroll" has-bouncing="false">
+        <div class="row row-center">
+        	<div class="col col-center height100">
+            	<span class="profile"></span>
+            </div>
+        </div>
+        
+        <div class="row row-bottom">
+        	<div class="col col-bottom">
+            	<h5 class="pink uppercase bottom-line">Add As Friend</h5>
+            </div>
+        </div>
+        
+        <div class="row row-top">
+        	<div class="col col-top">
+            	<h5>Rated</h5>
+				<h2 style="font-size:38px; margin-top:0" class="button-style">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-full.svg" alt="&#9733">
+                	<img class="star" src="svg/star-half.svg" alt="&#189">
+                  
+                </h2>
+                <div class="profile">Michael has been awarded 4,5 stars as a ahelper by other users.</div><br>
+                <h4 class="profile uppercase bottom-line">&lsaquo;&lsaquo; Master Helper &rsaquo;&rsaquo;</h4>
+            </div>
+        </div>
+
+        
+        <div class="row row-bottom">
+        	<div class="col col-bottom">
+            	<h5>About Michael</h5><br>
+				<div class="profile">Was born in <strong>United States</strong></div>
+				<div class="profile">Lives in <strong>Canada</strong></div>
+				<div class="profile">Is <strong>42</strong> Years Old</div>
+				<div class="profile">Is a <strong>Male</strong></div>
+				<div class="profile">Works as <strong>Architect</strong></div>
+            </div>
+        </div>
+         <div class="row row-center" style="margin:20px 0;">
+         	<div class="col col-center">
+            	<h4 class="pink" style="margin:20px 0;">A Few Words</h4>
+                <p>Hi, I'm Michael and I'm really thankful for all the great things I have. I hope I could help you and share a bit of my happiness with you. Peace.
+            </div>
+         </div>
+         <div class="row row-center bottom-line">
+         	<div class="col"></div>
+         	<div class="col col-center">
+            	<img class="svg" src="images/social-icons-circle-facebook.png">
+            </div>
+         	<div class="col col-center">
+            	<img class="svg" src="images/social-icons-circle-twitter.png">
+            </div>
+         	<div class="col"></div>
+        </div>
+
+
+        <div class="row row-top">
+        	<div class="col col-top">
+            	<h5>Personality Type</h5>
+				<h2 style="font-size:38px; margin-top:0" class="button-style">ENTP{{ state }}</h2>
+				<quote class="profile">One exciting challenge after another</quote>
+            </div>
+        </div>
+        <div class="row row-top">
+        	<div class="col col-top profile">
+
+                	<span ng-repeat="characteristic in characteristics track by $index" ng-show="characteristic &amp;&amp; (showFullCharacteristic || $index < 3)"><i class="icon icon-disc"></i>ENFT</span>
+            </div>
+        </div>
+        <div class="row row-bottom bottom-line">
+        	<div class="col col-bottom">
+            	<h5 class="pink uppercase">Most Inventive Type</h5>
+                <p class="pink tcenter" ng-click="showFullCharacteristics()">Tap here for the full description</p>
+            </div>
+        </div>
+        
+        <div ng-if="feelings" class="row row-center">
+        	<div class="col col-center">
+            	<div class="percentage-bar">
+                    <span style="width: {{ feelings['not-so-good'] }}%">{{ feelings['not-so-good'] }}%</span>
+                    <span style="width: {{ feelings['not-so-bad'] }}%">{{ feelings['not-so-bad'] }}%</span>
+                	<span style="width: {{ feelings['good'] }}%">{{ feelings['good'] }}%</span>
+                </div>
+            </div>
+         </div>
+
+            
+        <div class="row row-bottom">
+        	<div class="col col-bottom">
+            	<h5>Achievements</h5>
+            </div>
+        </div>
+         <div class="row row-top">
+         	<div class="col col-top">
+            	<ul class="medals">
+                	<li>You have succesfully finished 10 Mindfulness sessions</li>
+                	<li>You have succesfully finished 10 Mindfulness sessions</li>
+                	<li>You have succesfully finished 10 Mindfulness sessions</li>
+                </ul>
+                    
+            </div>
+         </div>
+        
+        <div class="row last-row"></div>
+    </ion-scroll>
+	<div class="bar bar-footer margin0 padding0">
+    	<div class="col col-top margin0 padding0">
+			<div class="bottom-bar-fixed"></div>
+         </div>
+	</div>
+  </ion-content>
+</ion-view>

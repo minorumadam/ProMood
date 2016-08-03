@@ -1,0 +1,106 @@
+/********* PANIC ATTACK REDO ************/
+/* ==================================== */
+
+.panic{
+			-webkit-font-smoothing: subpixel-antialiased;
+	.color-bar-blue-striped{
+			margin-bottom:0 !important;
+	}
+	#start{
+		font-family:$font-light;
+		font-size: 14vh;
+		font-weight: normal;
+	}
+	h2, span.headline{
+		font-family:$font-medium;
+		text-transform: uppercase;
+		color: #586B9A;
+		font-size: 6.5vh;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 9vh;	
+		span {
+			color:$pink; 
+			}
+
+	}
+		span.headline {
+		margin-bottom: 35px;
+		}
+	button {
+		
+		text-transform: uppercase;
+		font-size:6.5vh;
+		color: $violet;
+		margin-top: 30px;
+		padding: 0 20px;
+		
+		&.pink {
+			color:$pink; 
+			
+			}
+		}
+}
+.panic-container{
+	position:absolute;
+	top:0;
+}
+[class*='panic-paso']:not(.panic-paso-1){
+		visibility:hidden;
+	}
+
+				#panic-paso-12 {			
+					background:url('../images/panic_attack_12.png') center 60% repeat fixed;			
+					background-size: 80%;		
+	background-color: #D4D4D4;
+					visibility:visible;
+					width:100%;
+					position:relative;
+					top:48px;
+					}
+				#panic-paso-13 {			
+					background:url('../images/panic_attack_13.png') center no-repeat fixed;			
+					background-size: cover;		
+	background-color: #D4D4D4;
+					visibility:visible;
+					width:100%;
+					position:relative;
+					top:48px;
+					}
+				#panic-paso-14 {			
+					background:url('../images/panic_attack_14.png') center no-repeat fixed;			
+					background-size: cover;
+	background-color: #D4D4D4;
+					visibility:visible;
+					width:100%;
+					position:relative;
+					top:48px;
+					}
+				#panic-paso-15 {			
+					background:url('../images/panic_attack_15.png') center no-repeat fixed;			
+					background-size: cover;
+	background-color: #D4D4D4;
+					visibility:visible;
+					width:100%;
+					position:relative;
+					top:48px;
+					}
+				#panic-paso-16 {			
+					background:url('../images/panic_attack_16.png') center no-repeat fixed;			
+					background-size: cover;
+	background-color: #D4D4D4;
+					visibility:visible;
+					width:100%;
+					position:relative;
+					top:48px;
+					}
+				#panic-paso-17 {			
+					background:url('../images/panic_attack_17.png') center no-repeat fixed;			
+					background-size: cover;
+	background-color: #D4D4D4;
+					visibility:visible;
+					width:100%;
+					position:relative;
+					top:48px;
+					}	

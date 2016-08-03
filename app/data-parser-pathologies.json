@@ -1,0 +1,40 @@
+{
+  "en": {
+    "jealousy": "jealousy",
+    "guilt": "guilt",
+    "disdain": "contempt",
+    "contempt": "contempt",
+    "pain": "sorrow",
+    "sorrow": "sorrow",
+    "ruminative thoughts": "ruminative thoughts",
+    "hostility": "hostility",
+    "shame": "shame",
+    "anger": "anger",
+    "phobia": "phobia",
+    "restlessness": "restlessness",
+    "concern": "concern",
+    "loneliness": "loneliness",
+    "suspicion": "suspicion",
+    "indecision": "indecision",
+    "reluctance": "reluctance",
+    "stressed": "stressed",
+    "unwilling": "reluctance",
+    "somewhat stressed": "stressed"
+  },
+
+  "es": {
+    "celos": "jealousy",
+    "culpa": "guilt",
+    "desprecio": "contempt",
+    "dolor": "sorrow",
+    "enojo": "anger",
+    "fobia": "phobia",
+    "intranquilo": "restlessness",
+    "preocupacion": "concern",
+    "soledad": "loneliness",
+    "sospecha": "suspicion",
+    "indecisión": "indecision",
+    "desgano": "reluctance",
+    "estrés": "stressed"
+  }
+}

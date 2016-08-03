@@ -1,0 +1,19 @@
+<div class="color-bar-blue-striped">Step Six</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Social Pressure</h5>
+    <p>Communicate your goals and the results you expect to the people you love, and make sure they can check your progress. This way, you'll bring the best out of you to keep your word and you will be even more motivated to accomplish your goals.</p>
+    <p>Write the names of the persons you will share your goals with:</p>
+  </div>
+</div>
+<div class="row row-bottom" ng-repeat="person in procastination.persons" on-last-repeat>
+  <div class="col col-bottom">
+    	<textarea placeholder="Write here" class="msd-elastic italic bottom-line violet tcenter text-size min-height-inherit" ng-model="person.name" rows="1"></textarea>
+    </div>
+  </div>
+  <div class="row row-top height7">
+    <div class="col col-top height100">
+      <p class="height100 tcenter" ng-click="procastinationAddPerson()"><img alt="+" src="svg/circle-plus.svg" class="pink"></p>
+    </div>
+  </div>
+  <div class="row last-row"></div>

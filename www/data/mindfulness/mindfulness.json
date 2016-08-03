@@ -1,0 +1,14 @@
+{
+	"mindfulness": {
+	  "first": 1,
+	  "last": 56,
+	  "explanation" : "Lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+	  "songs": {
+	    "first": {"morningSong" : "documents://Trainings/Mindfulness/01.mindfulness_first session.mp3", "afternoonSong" : "documents://Trainings/Mindfulness/01.bodyscan_first session.mp3"},
+	    "2": {"morningSong" : "documents://Trainings/Mindfulness/02.mindfulness_session A.mp3", "afternoonSong" : "documents://Trainings/Mindfulness/02.bodyscan_session A.mp3"},
+	    "3": {"morningSong" : "documents://Trainings/Mindfulness/03.mindfulness_session B.mp3", "afternoonSong" : "documents://Trainings/Mindfulness/03.bodyscan_session B.mp3"},
+	    "4": {"morningSong" : "documents://Trainings/Mindfulness/04.mindfulness_session C.mp3", "afternoonSong" : "documents://Trainings/Mindfulness/04.bodyscan_session C.mp3"},
+	    "last": {"morningSong" : "documents://Trainings/Mindfulness/05.mindfulness_last session.mp3", "afternoonSong" : "documents://Trainings/Mindfulness/05.bodyscan_last session.mp3"}
+	  }
+	}
+}

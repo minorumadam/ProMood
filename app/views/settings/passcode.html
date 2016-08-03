@@ -1,0 +1,16 @@
+  <div class="row row-center height100 margin0 over-bg-name">
+   <!-- <div class="col col-center"> -->
+      <div class="col">
+        <h2 ng-show="createPassword">Create Passcode</h2>
+        <h2 ng-show="confirmPassword">Confirm Passcode</h2>
+        <h2 ng-show="askForPassword">Enter Passcode</h2>
+      <label class="home-inputs">
+        <input id="passField" type="password" dir="ltr" class="home-inputs" pattern="[0-9]*"
+        maxlength="4" size="4" ng-change="onChangePasscodeInput(passcode.input)" ng-model="passcode.input">
+      </label>
+    </div>
+  </div>
+  <div class="bottom-bar-fixed"></div>
+
+
+

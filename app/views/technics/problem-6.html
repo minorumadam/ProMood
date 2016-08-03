@@ -1,0 +1,18 @@
+<div class="color-bar-blue-striped">Step Six</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Plan of Action</h5>
+    <p>The work concludes with the preparation of a detailed plan of action that defines all the steps necessary to implement the solution.</p>
+  </div>
+</div>
+<div class="row row-bottom" ng-repeat="action in problem.actions" on-last-repeat>
+  <div class="col">
+    <textarea placeholder="Write here" class="msd-elastic italic bottom-line text-size violet tcenter" ng-model="action.name" rows="1"></textarea>
+  </div>
+</div>
+<div class="row row-top height7">
+  <div class="col height100">
+    <p class="height100 tcenter" ng-click="problemAddAction()"><img class="pink" src="svg/circle-plus.svg" alt="+"></p>
+  </div>
+</div>
+</div>

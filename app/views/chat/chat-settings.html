@@ -1,0 +1,143 @@
+<ion-view title="<span>Chat</span>">
+  <ion-content>
+  	<ion-scroll scroll="auto" class="height100" has-bouncing="false">
+        <div class="color-bar-pink-striped"> Privacy Settings	<span class="help-icon-rounded-not-good bar-right-icon" ng-click="closeProfile()"><img src="svg/icon-rounded-close-2.svg"></span></div>
+
+        <div class="row row-top margin-top-8">
+        	<div class="col padding0">
+                <p class="tleft">On this screen you can define what other users will see when they visit your profile. Your name and picture will always be shown unless you chat anonymously.</p>
+             </div>
+        </div>
+
+        <ul class="list tleft">
+          <li class="item item-toggle chat">
+             Show Age
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="$root.chatPrivacy.age" ng-click="changeAgePrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <li class="item item-toggle chat">
+             Show Gender
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="$root.chatPrivacy.gender" ng-click="changeGenderPrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <!--li class="item item-toggle chat">
+             Show Users Rating
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="$root.chatPrivacy.ratings" ng-click="changePrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li-->
+          <li class="item item-toggle chat">
+             Show Personality Type
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="$root.chatPrivacy.personalityType" ng-click="changePersonalityTypePrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <li class="item item-toggle chat">
+             Show Average Mood
+             <label class="toggle toggle-assertive">
+               <input type="checkbox"  ng-model="$root.chatPrivacy.averageMood" ng-click="changeAverageMoodPrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <!--li class="item item-toggle chat">
+             Show Social Media Links
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="$root.chatPrivacy.socialLinks" ng-click="changePrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li-->
+          <li class="item item-toggle chat">
+             Show Achievements
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="$root.chatPrivacy.achievements" ng-click="changeAchievementsPrivacy()">
+               <div class="track pink-toggle">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+        </ul>
+
+        <div class="row row-bottom">
+        	<div class="col padding0">
+                <p class="tleft">
+                <em class="uppercase">Personal Information</em><br><br>
+                    Please fill in <strong>only</strong> the fields you'd like share with other users:
+                    </p>
+            </div>
+         </div>
+
+<div class="list">
+
+  <label class="item item-radio chat" ng-click="showChangeBornCountry()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">From</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.bornLocation">Choose Country</span>
+    <span class="arrow-right-promood" ng-show="$root.user.bornLocation">{{$root.user.bornLocation}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+  <label class="item item-radio chat" ng-click="showChangeCountry()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">Live In</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.location">Choose Country</span>
+    <span class="arrow-right-promood" ng-show="$root.user.location">{{$root.user.location}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+  <label class="item item-radio chat" ng-click="showChangeJob()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">Occupation</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.job">Blank</span>
+    <span class="arrow-right-promood" ng-show="$root.user.job">{{$root.user.job}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+  <label class="item item-radio chat" ng-click="showChangeMaritalStatus()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">Marital Status</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.maritalStatus">Choose</span>
+    <span class="arrow-right-promood" ng-show="$root.user.maritalStatus">{{$root.user.maritalStatus}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+  <label class="item item-radio chat" ng-click="showChangeHobbies()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">Hobbies</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.hobbies">Blank</span>
+    <span class="arrow-right-promood" ng-show="$root.user.hobbies">{{$root.user.hobbies}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+  <label class="item item-radio chat" ng-click="showChangeQuote()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">Favorite Quote</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.quote">Blank</span>
+    <span class="arrow-right-promood" ng-show="$root.user.quote">{{$root.user.quote}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+  <label class="item item-radio chat" ng-click="showChangeWords()">
+    <input type="radio" name="group">
+    <div class="item-content tleft chat">A Few Words</div>
+    <span class="arrow-right-promood" ng-show="!$root.user.words">Blank</span>
+    <span class="arrow-right-promood" ng-show="$root.user.words">{{$root.user.words}}</span>
+    <i class="arrow-right-promood ion-ios7-arrow-right"></i>
+  </label>
+</div>
+	<div class="row last-row"></div>
+</ion-scroll>
+	<div class="bar bar-footer margin0 padding0"></div><!-- Muestra solo el fadding blanco inferior -->
+  </ion-content>
+</ion-view>

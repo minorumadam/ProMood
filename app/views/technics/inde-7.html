@@ -1,0 +1,30 @@
+<div class="color-bar-blue-striped" style="margin-bottom:9px;">Step Seven</div>
+<div class="row row-center" data-ng-init="sortOptions()">
+  <div class="col col-center">
+    <h5 class="violet">Choose The Best Option</h5>
+  </div>
+</div>
+<!-- ESTO SERIA UN CUSTOM CON CHECK CON LOS LI DE OPCIONES -->
+<span ng-repeat="option in indecision.options">
+  <div class="row row-center custom-check fsize-small" ng-class="{'active':option.selected}" ng-click="indecisionOptionSelected($index)">
+    <div class="col-10 col-center">
+      {{$index + 1}}
+    </div>
+    <div class="col col-center padding0 tleft">
+      {{option.name}}
+    </div>
+    <div class="col-10 tright">
+      <img src="svg/ios-check.svg" alt="X" class="svg">
+    </div>
+  </div>
+  <div class="row row-center">
+    <div class="col col-offset-10 col-center">
+      <ul class="custom-check">
+        <li class="pink" ng-repeat="pro in option.pros">{{pro.name}}</li>
+        <li class="violet" ng-repeat="contra in option.contras">{{contra.name}}</li>
+      </ul>
+    </div>
+  </div>
+
+</span>
+<div class="row last-row"></div>

@@ -1,0 +1,348 @@
+/* SassCSS Document */
+/* ABDOMINAL BREATHING */
+.abdominal-breathing{
+	position:absolute;
+	width:100%;
+	bottom:0;
+		.biorythm-bar-breathing{
+			@extend .biorythm-bar-hold;
+			max-height:11vh;
+			border-bottom:none;
+			background-color:#5e6b97;
+			font-family:$font-medium;
+			font-size:16px;
+			margin:0;
+			p{
+				margin-bottom:0;
+				margin-top:12px;
+			position:absolute;
+			width:100%;
+			font-size:8.13vh;
+			line-height:4vh;
+			bottom:74px; /* Safety */
+			bottom:13vh; /* Safety */
+			bottom:calc(100% - 1em);
+
+			}
+			span{
+					background-color:#7e88ad;
+					/*height:66px;*/
+					height:11vh;
+				}
+		}
+		.controls{
+				font-family:$font-medium;
+				font-size:2.8vh;
+				line-height:3vh;
+				color:#a0aacc;
+				background-color:$violet;
+				padding: 6px;
+				& .selected{
+						height:auto;
+						color:#fff;
+						width:auto;
+						background-color:transparent;
+					}
+			}
+
+}
+.silhouette{
+	background:url('../images/silhouette.png') no-repeat center bottom;
+	background-size:auto 100%;
+}
+.air{
+		height:10vh;
+		color:#fff;
+		font-size:10vh;
+		margin: auto;
+		width: 50%;
+		
+		background-image:radial-gradient(#ffffff 30%, rgba(255, 255, 255, 0) 70%);
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:0 0;
+		
+		/* ANIMACION VELOCIDAD NORMAL*/
+		&.animate-normal{
+				@include animation('air-breathing-normal 9s infinite linear 0s');
+				@include vendor-prefix('animation-fill-mode','forwards');
+				opacity:1;
+
+				img{
+					@include animation('air-breathing-arrow-normal 9s infinite linear 0s');
+					@include vendor-prefix('animation-fill-mode','forwards');
+				}	
+		}
+		/* ANIMACION VELOCIDAD SLOW*/
+		&.animate-slow{
+				@include animation('air-breathing-slow 13s infinite linear 0s');
+				@include vendor-prefix('animation-fill-mode','forwards');
+				opacity:1;
+
+				img{
+					@include animation('air-breathing-arrow-slow 13s infinite linear 0s');
+					@include vendor-prefix('animation-fill-mode','forwards');
+				}	
+		}
+		/* ANIMACION VELOCIDAD SLOWER*/
+		&.animate-slower{
+				@include animation('air-breathing-slower 18s infinite linear 0s');
+				@include vendor-prefix('animation-fill-mode','forwards');
+				opacity:1;
+
+				img{
+					@include animation('air-breathing-arrow-slower 18s infinite linear 0s');
+					@include vendor-prefix('animation-fill-mode','forwards');
+				}	
+		}
+
+	}
+
+p.inhale, p.exhale, p.hold, .air{opacity:0;}
+
+
+/* ANIMACION PARA VELOCIDAD NORMAL */
+/* =============================== */
+.air-breathing-bar-animate-normal{
+		span{
+			@include vendor-prefix('transform','scale3d(0,1,0)');
+			@include animation('air-breathing-bar-animate-normal 9s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.inhale{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-normal-p-inhale 9s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.exhale{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-normal-p-exhale 9s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.hold{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-normal-p-hold 9s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+
+	}
+	
+/* ANIMACIONES DE LA TECNICA DE AIR BREATHING aksdjaks*/
+@include keyframes(air-breathing-normal) {
+  0%{ @include vendor-prefix('transform','translateY(0)'); background-size:0% 0%;}
+  40.44%{ background-size:0% 0%;}
+  44.44%{ @include vendor-prefix('transform','translateY(100%)'); background-size:60% 100%;}
+  55.56%{ @include vendor-prefix('transform','translateY(100%)'); background-size:60% 100%;}
+  56%{ @include vendor-prefix('transform','translateY(100%)'); background-size:0% 0%;}
+  100%{ @include vendor-prefix('transform','translateY(0%)'); background-size:0% 0%;}
+}
+
+@include keyframes(air-breathing-arrow-normal) {
+  0%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+  9%{opacity:1;}
+  40.44%{opacity:1;}
+  44.44%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+  56%{opacity:0; @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  66%{opacity:1;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  90%{opacity:1;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  99%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  100%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+
+}
+
+/* ANIMACION AIR BREATHING BAR */
+@include keyframes(air-breathing-bar-animate-normal) {
+	0%{@include vendor-prefix('transform','scale3d(0,1,0)');}
+	44.44%{@include vendor-prefix('transform','scale3d(1,1,0)');}
+	55.56%{@include vendor-prefix('transform','scale3d(1,1,0)');}
+	100%{@include vendor-prefix('transform','scale3d(0,1,0)');}
+}
+@include keyframes(air-breathing-bar-animate-normal-p-inhale) {
+	0%{opacity:0;}
+	9%{opacity:1;}
+	40.44%{opacity:1;}
+	44.44%{opacity:0;}
+}
+@include keyframes(air-breathing-bar-animate-normal-p-hold) {
+	0%{opacity:0;}
+	44.44%{opacity:0;}
+	45%{opacity:1;}
+	55.56%{opacity:1;}
+	56%{opacity:0;}
+}
+@include keyframes(air-breathing-bar-animate-normal-p-exhale) {
+	0%{opacity:0;}
+	56%{opacity:0;}
+	66%{opacity:1;}
+	90%{opacity:1;}
+	100%{opacity:0;}
+}
+/* ending animaciones velocidad normal */
+/* =================================== */
+
+/* ANIMACION PARA VELOCIDAD SLOW */
+/* =============================== */
+.air-breathing-bar-animate-slow{
+		span{
+			@include vendor-prefix('transform','scale3d(0,1,0)');
+			@include animation('air-breathing-bar-animate-slow 13s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.inhale{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-slow-p-inhale 13s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.exhale{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-slow-p-exhale 13s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.hold{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-slow-p-hold 13s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+
+	}
+	
+/* ANIMACIONES DE LA TECNICA DE AIR BREATHING */
+@include keyframes(air-breathing-slow) {
+  0%{ @include vendor-prefix('transform','translate3d(0,0,0)'); background-size:0% 0%;}
+  26.76%{ background-size:0% 0%;}
+  30.76%{ @include vendor-prefix('transform','translateY(100%)'); background-size:60% 100%;}
+  38.46%{ @include vendor-prefix('transform','translateY(100%)'); background-size:60% 100%;}
+  39%{ @include vendor-prefix('transform','translateY(100%)'); background-size:0% 0%;}
+  100%{ @include vendor-prefix('transform','translateY(0%)'); background-size:0% 0%;}
+}
+
+@include keyframes(air-breathing-arrow-slow) {
+  0%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+  9%{opacity:1;}
+  26.76%{opacity:1;}
+  30.76%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+  38.46%{opacity:0; @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  39%{opacity:1;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  90%{opacity:1;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  99%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  100%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+
+}
+
+/* ANIMACION AIR BREATHING BAR */
+@include keyframes(air-breathing-bar-animate-slow) {
+	0%{@include vendor-prefix('transform','scale3d(0,1,0)');}
+	30.76%{@include vendor-prefix('transform','scale3d(1,1,0)');}
+	38.46%{@include vendor-prefix('transform','scale3d(1,1,0)');}
+	100%{@include vendor-prefix('transform','scale3d(0,1,0)');}
+}
+@include keyframes(air-breathing-bar-animate-slow-p-inhale) {
+	0%{opacity:0;}
+	9%{opacity:1;}
+	26.76%{opacity:1;}
+	30.76%{opacity:0;}
+}
+@include keyframes(air-breathing-bar-animate-slow-p-hold) {
+	0%{opacity:0;}
+	30.76%{opacity:0;}
+	35%{opacity:1;}
+	38.46%{opacity:1;}
+	39%{opacity:0;}
+}
+@include keyframes(air-breathing-bar-animate-slow-p-exhale) {
+	0%{opacity:0;}
+	38.46%{opacity:0;}
+	48%{opacity:1;}
+	90%{opacity:1;}
+	100%{opacity:0;}
+}
+/* ending animaciones velocidad slow */
+/* =================================== */
+
+
+
+
+/* ANIMACION PARA VELOCIDAD SLOWER */
+/* =============================== */
+.air-breathing-bar-animate-slower{
+		span{
+			@include vendor-prefix('transform','scale3d(0,1,0)');
+			@include animation('air-breathing-bar-animate-slower 18s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.inhale{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-slower-p-inhale 18s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.exhale{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-slower-p-exhale 18s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+		p.hold{
+			opacity:0;
+			@include animation('air-breathing-bar-animate-slower-p-hold 18s infinite linear 0s');
+			@include vendor-prefix('animation-fill-mode','forwards');
+		}
+
+	}
+	
+/* ANIMACIONES DE LA TECNICA DE AIR BREATHING */
+@include keyframes(air-breathing-slower) {
+  0%{ @include vendor-prefix('transform','translateY(0)'); background-size:0% 0%;}
+  40.44%{ background-size:0% 0%;}
+  44.44%{ @include vendor-prefix('transform','translateY(100%)'); background-size:60% 100%;}
+  55.55%{ @include vendor-prefix('transform','translateY(100%)'); background-size:60% 100%;}
+  66%{ @include vendor-prefix('transform','translateY(100%)'); background-size:0% 0%;}
+  100%{ @include vendor-prefix('transform','translateY(0%)'); background-size:0% 0%;}
+}
+
+@include keyframes(air-breathing-arrow-slower) {
+  0%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+  9%{opacity:1;}
+  40.44%{opacity:1;}
+  44.44%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+  55.55%{opacity:0; @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  66%{opacity:1;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  90%{opacity:1;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  99%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,180deg)');}
+  100%{opacity:0;  @include vendor-prefix('transform', 'rotate3d(0,0,1,0deg)');}
+
+}
+
+/* ANIMACION AIR BREATHING BAR */
+@include keyframes(air-breathing-bar-animate-slower) {
+	0%{@include vendor-prefix('transform','scale3d(0,1,0)');}
+	44.44%{@include vendor-prefix('transform','scale3d(1,1,0)');}
+	55.55%{@include vendor-prefix('transform','scale3d(1,1,0)');}
+	100%{@include vendor-prefix('transform','scale3d(0,1,0)');}
+}
+@include keyframes(air-breathing-bar-animate-slower-p-inhale) {
+	0%{opacity:0;}
+	9%{opacity:1;}
+	40.44%{opacity:1;}
+	44.44%{opacity:0;}
+}
+@include keyframes(air-breathing-bar-animate-slower-p-hold) {
+	0%{opacity:0;}
+	40.44%{opacity:0;}
+	44.44%{opacity:1;}
+	55.55%{opacity:1;}
+	56%{opacity:0;}
+}
+@include keyframes(air-breathing-bar-animate-slower-p-exhale) {
+	0%{opacity:0;}
+	55.55%{opacity:0;}
+	65%{opacity:1;}
+	90%{opacity:1;}
+	100%{opacity:0;}
+}
+/* ending animaciones velocidad slower */
+/* =================================== */
+
+
+
+/* ending animaciones air breathing... */
+/* ending abdominal breathing */
+

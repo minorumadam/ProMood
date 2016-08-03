@@ -1,0 +1,19 @@
+<div class="color-bar-blue-striped" style="margin-bottom:9px;">Step Five</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Elaboration of Solution</h5>
+    <p>Any idea is only the first step towards the desired state. It needs to be developed and converted into a solid and workable solution. In order to ensure the successdul implementation of the elaborated solution, it's essential to explore all factors that can influence this process.</p>
+    <p>What do you have to do in order to carry out the idea?</p>
+  </div>
+</div>
+    <div class="row row-bottom" ng-repeat="solution in problem.solutions" on-last-repeat>
+      <div class="col">
+        <textarea placeholder="Write here" class="msd-elastic italic bottom-line violet text-size min-height-inherit tcenter" ng-model="solution.name" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="row row-top height7">
+        <div class="col height100" ng-click="problemAddSolution()">
+          <p class="height100 tcenter"><img class="pink" src="svg/circle-plus.svg" alt="+"></p>
+        </div>
+    </div>
+<div class="row last-row"></div>

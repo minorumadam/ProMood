@@ -1,0 +1,10 @@
+<div class="row row-center height100 margin0 over-bg-gender">
+  <div class="col col-center">
+        <h1>What's<span>your gender?</span></h1>
+
+        <label class="home-inputs">
+          <select class="home-inputs" ng-model="gender" ng-options="option.value as option.name for option in genders" ng-change="changeGender(gender)"></select>
+        </label>
+    </div>
+</div>
+<div class="bottom-bar-fixed"></div>

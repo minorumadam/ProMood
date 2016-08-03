@@ -1,0 +1,19 @@
+<div class="color-bar-blue-striped">Step Three</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Identify Your Options</h5>
+    <p>What options do you have to carry out this decision? Identify each of them and write them down on different fields:</p>
+  </div>
+</div>
+<div class="row row-bottom" ng-repeat="option in indecision.options" on-last-repeat>
+  <div class="col col-bottom">
+
+    <textarea placeholder="Option" class="msd-elastic italic bottom-line violet text-size min-height-inherit tcenter" placeholder="{{option.name===''?'option':''}}" ng-model="option.name" rows="1"></textarea>
+  </div>
+</div>
+<div class="row row-top height7">
+  <div class="col col-top height100">
+    <p class="height100 tcenter" ng-click="indecisionAddOption()"><img class="pink" src="svg/circle-plus.svg" alt="+"></p>
+  </div>
+</div>
+</div>

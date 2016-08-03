@@ -1,0 +1,22 @@
+<ion-view title="<span>Chat</span>">
+  <ion-content class="over-bg-g">
+        <div class="color-bar-title-striped-pink chat"> Your Friends<span class="help-icon-rounded-not-good bar-right-icon" ng-click="closeProfile()"><img src="svg/icon-rounded-close-2.svg"></span></div>
+    <ion-scroll scroll="auto" has-bouncing="false" class="height100 has-subheader">
+
+      <!-- FRIEND ROW -->
+      <!--<div class="row row-center bottom-line friends" ng-repeat="friend in $root.chatUser.FriendOf">
+        <div class="col col-center tleft padding0">
+          <span class="friend-name fleft" ng-class="{'dot':isConnected(friend)}" ng-click="chatWith(friend)">{{friend.name}}</span>
+        </div>
+          <div class="col tright profile-btns pink uppercase">
+            <span ng-click="chatViewProfile()">View Profile</span> <span class="dot" ng-click="unfriend(friend)">Unfriend</span>
+          </div>
+      </div>-->
+      <!-- endind friend row -->
+
+
+      <div class="row last-row"></div>
+    </ion-scroll>
+    <div class="bar bar-footer margin0 padding0"></div><!-- Muestra solo el fadding blanco inferior -->
+  </ion-content>
+</ion-view>

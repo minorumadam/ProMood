@@ -1,0 +1,31 @@
+<div class="color-bar-blue-striped">{{technic.subtitle}}</div><span class="help-icon-rounded-not-good top-right-button" ng-click="postpone(technic)"><img src="svg/postpone-icon-rounded.svg"></span>
+<div class="row row-center">
+  <div class="col col-center">
+    <p>Welcome to your 56-days mindfulness training. Find a comfortable place, connect your headphones and let the voice guide you through.</p>
+  </div>
+</div>
+<div class="row height10 padding0">
+  <div class="col col-center day-mindfulness violet uppercase">Day {{data.currentDayNumber}}</div>
+</div>
+
+<!--div>Audio Current time: {{audioCurrentTime}}</div>
+<div>Autio Current status: {{audioStatus}}</div>
+<div>Audio Duration: {{audio.getDuration()}}</div>
+<div>Is Audio Playing: {{isAudioPlaying()}}</div>
+<div>Is Audio Completed: {{isAudioCompleted()}}</div>
+<div>Audio Progress: {{audioProgress}}</div-->
+
+<div class="row row-bottom fsize-small audio-player-relative">
+  <div class="col">
+<!-- 	<div ng-include="mindfulness.url"></div> -->
+      <span></span>
+      <div class="gif-bg-holder"></div>
+      <div class="gif-bg" ng-class="{'pause': isAudioPlaying(), 'repeat': isAudioCompleted()}"></div> <!-- AGREGANDO LA CLASE pause EN ESTE DIV, APARECE EL ICONO DE PAUSA -->
+      <div class='gif' ng-click="isAudioPlaying() ? audio.pause() : playAudio()" style="transform:rotate({{(360 * audioProgress)}}deg); -webkit-transform:rotate({{(360 * audioProgress)}}deg);"></div>
+      <div class="cp-progress-holder cp-gt50" style="display: block;">
+        <div class="cp-progress-1" style="transform:rotate({{((360 * audioProgress)) < 180 ? ((360 * audioProgress) ) : 180}}deg); -webkit-transform:rotate({{((360 * audioProgress)) < 180 ? ((360 * audioProgress) ) : 180}}deg); background:#383838;"></div>
+        <div class="cp-progress-2" style="transform:rotate({{((360 * audioProgress)) < 180 ? 0 : ((360 * audioProgress))}}deg) scale({{((360 * audioProgress) ) < 180 ? 1.01 : 1}}); -webkit-transform:rotate({{((360 * audioProgress)) < 180 ? 0 : ((360 * audioProgress))}}deg) scale({{((360 * audioProgress) ) < 180 ? 1.01 : 1}}); background:#{{((360 * audioProgress) ) < 180 ? 'DDD' : '383838'}}"></div>
+      </div>
+      <!--div class="progress-time">{{audio.currentTime|millSecondsToTimeString}}</div-->
+    </div>
+</div>

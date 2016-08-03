@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+  <link rel="stylesheet" href="bower_components/swiper/dist/idangerous.swiper.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- IconFonts para ProMood -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/promood-icons.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="promoodApp">
+  <ion-side-menus ng-cloak>
+    <ion-side-menu-content drag-content="false" ng-class="{ 'blur-me': menuOpened }">
+      <ion-nav-bar id="ionNavBar" class="bar-header nav-title-slide-ios7"></ion-nav-bar>
+
+      <ion-nav-buttons side="left">
+        <button id="leftMenutButton" menu-toggle="left" class="button button-icon icon icon-menu"></button>
+      </ion-nav-buttons>
+
+
+      <ion-nav-buttons side="right" ng-controller="ChatController" >
+        <i class="icon icon-config chat-config" id="rightMenuButton" menu-toggle="right" ng-show="$root.showChatSettingMenu"></i>
+      </ion-nav-buttons>
+
+      <ion-nav-view id="ionNavView" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu width="160" side="left" ng-class="{ 'menu-bg-animate': menuOpenedLeft , 'menu-bg-dont-animate': menuOpenedLeftDontAnimate }">
+      <header class="bar bar-header bar-positive">
+        <button menu-close class="button button-icon" style="z-index:100;">
+          <i class="icon icon-skinny-close menu-close" ng-class="{ 'menu-close-animate': menuOpened, 'menu-close-dont-animate': menuOpenedDontAnimate }"></i>
+        </button>
+        <i class="icon icon-skinny-close menu-close-back" ng-class="{ 'menu-close-back-animate': menuOpened, 'menu-close-back-dont-animate': menuOpenedDontAnimate }"></i>
+      </header>
+
+      <ion-content class="has-header tleft">
+        <ion-list ng-class="{ 'menu-animate': menuOpened, 'menu-dont-animate': menuOpenedDontAnimate }">
+          <ion-item nav-clear menu-close ui-sref="welcome" id="item-home">
+            <i class="icon icon-home"></i>Home
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="profile">
+            <i class="icon icon-user"></i>Profile
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="goals" ng-controller="GoalsController">
+            <i class="icon icon-target-shooting"></i>Goals<sup>{{getGoalsCount()}}</sup>
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="trainings">
+            <i class="icon icon-hat"></i>Trainings
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="chat">
+            <i class="icon icon-chat-balloon" ></i>Chat
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="settings">
+            <i class="icon icon-config"></i>Settings
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="about" id="item-about">
+            <i class="icon icon-info"></i>About
+          </ion-item>
+          <ion-item nav-clear menu-close ui-sref="panic-redo" id="item-panic">
+            <i class="icon icon-plus"></i>Panic
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+
+    <ion-side-menu width="190" side="right" ng-class="{ 'menu-bg-animate': menuOpenedRight, 'menu-bg-dont-animate': menuOpenedRightDontAnimate }" ng-controller="ChatController">
+      <header class="bar bar-header bar-positive tright">
+        <button menu-close class="button button-icon icon-chat-menu-style-close" style="z-index:100;">
+          <i class="icon icon-skinny-close menu-close" ng-class="{ 'menu-close-animate': menuOpened, 'menu-close-dont-animate': menuOpenedDontAnimate }"></i>
+        </button>
+        <i class="icon icon-skinny-close menu-close-back icon-chat-menu-style-close" ng-class="{ 'menu-close-back-animate': menuOpened, 'menu-close-back-dont-animate': menuOpenedDontAnimate }" style="right:12px !important; top:12px !important;"></i>
+      </header>
+
+      <ion-content class="has-header tright">
+        <ion-list ng-class="{ 'menu-animate': menuOpened,'menu-dont-animate': menuOpenedDontAnimate }">
+          <ion-item nav-clear menu-close id="item-home" ng-click="viewChatSettings()">
+            Edit My Profile<i class="icon icon-user icon-chat-menu-style"></i>
+          </ion-item>
+          <!--<ion-item nav-clear menu-close ng-click="viewFriends()">
+            Friends<i class="icon icon-multiple-user icon-chat-menu-style"></i>
+          </ion-item>
+          <ion-item nav-clear menu-close ng-click="blockUser()">
+            Block User<i class="icon icon-cancel icon-chat-menu-style"></i>
+          </ion-item>-->
+          <ion-item nav-clear menu-close ng-click="disconnect()">
+            Leave Chat<i class="icon icon-exit icon-chat-menu-style"></i>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+
+  </ion-side-menus>
+    
+  <script src="cordova.js"></script>
+    
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/collide/collide.js"></script>
+  <script src="bower_components/ionic/release/js/ionic.js"></script>
+  <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+  <script src="bower_components/swiper/dist/idangerous.swiper.js"></script>
+  <script src="bower_components/angular-media-player/dist/angular-media-player.min.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/greensock/src/uncompressed/TweenMax.js"></script>
+  <script src="bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js"></script>
+  <script src="bower_components/viewport-units-buggyfill/viewport-units-buggyfill.hacks.js"></script>
+  <script src="bower_components/angular-elastic/elastic.js"></script>
+  <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+    
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+
+  <script src="scripts/angular.audio.js"></script>
+
+  <script src="Scripts/chat/initialize.js"></script>
+  <script src="Scripts/chat/UserWebSocket.js"></script>
+  <script src="Scripts/chat/ChatWebApi.js"></script>
+  <script src="Scripts/chat/ConversationManager.js"></script>
+  <script src="Scripts/chat/ChatProfile.js"></script>
+  <script src="scripts/controllers/home.js"></script>
+  <script src="scripts/controllers/intro.js"></script>
+  <script src="scripts/controllers/personality-test.js"></script>
+  <script src="scripts/controllers/welcome.js"></script>
+  <script src="scripts/controllers/settings.js"></script>
+  <script src="scripts/controllers/profile.js"></script>
+  <script src="scripts/controllers/feeling-good.js"></script>
+  <script src="scripts/controllers/feeling-not-so-good.js"></script>
+  <script src="scripts/controllers/feeling-not-so-bad.js"></script>
+  <script src="scripts/controllers/goals.js"></script>
+  <script src="scripts/controllers/technics.js"></script>
+  <script src="scripts/controllers/trainings.js"></script>
+  <script src="scripts/controllers/chat.js"></script>
+  <!--script src="scripts/controllers/chat-disabled.js"></script>-->
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/panic.js"></script>
+  <script src="scripts/controllers/panic-redo.js"></script>
+  <script src="scripts/controllers/testLoneliness.js"></script>
+  <script src="scripts/controllers/about-biorhythm.js"></script>
+
+  <script src="scripts/services/user.js"></script>
+  <script src="scripts/services/feeling.js"></script>
+  <script src="scripts/services/personality.js"></script>
+  <script src="scripts/services/states.js"></script>
+  <script src="scripts/services/goals.js"></script>
+  <script src="scripts/services/chat.js"></script>
+  <script src="scripts/services/trainings-service.js"></script>
+  <script src="scripts/services/calendar.js"></script>
+  <script src="scripts/services/notifications.js"></script>
+  <script src="scripts/services/camera.js"></script>
+
+  <script src="scripts/directives/html-bind-compile.js"></script>
+  <script src="scripts/directives/content-editable.js"></script>
+  <script src="scripts/directives/focus-on-last.js"></script>
+
+  <script src="scripts/filters/milliseconds.js"></script>
+
+
+  <!-- endbuild -->
+</body>
+</html>

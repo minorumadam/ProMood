@@ -1,0 +1,51 @@
+<ion-view title="<span>Goals</span>">
+  <ion-content scroll="false" has-bouncing="false" class="over-bg-g2">
+    <div class="color-bar-title-striped-pink">Things To Be Done<span></span></div>
+  	<ion-scroll scroll="auto" class="height100 has-subheader" has-bouncing="false">
+
+        <!-- Task Desplegada con Descripcion -->
+        <!-- <div class="row row-center">
+        	<div class="col col-center">
+            		<div class="tright">
+		                <p class="tcenter bottom-line"> Do a short session of Mindulness <sup class="close"><i class="icon icon-close"></i></sup></p>
+                        <sup class="close"><em>01.02.2014</em></sup>
+                        <p class="pink tright goals">
+                        	Brief description of the technique to be done. This text is displayed once the user taps on the task. It can be removed by tapping on the "x".
+                        </p>
+                        <button class="uppercase goals">Start</button>
+                    </div>
+            </div>
+        </div> -->
+		<div class="row row-center height80" ng-show="$root.showNoGoals">
+        	<div class="col">
+            	<p class="tcenter"><strong>Hey there! You currently don't have any goals.</strong></p>
+            </div>
+        </div>
+		<!-- Task Sin Descripción -->
+        <span ng-repeat="goal in goals">
+            <div class="row row-center">
+                <div class="col col-center" ng-click="showGoalDescription('#goalDescription'+$index)">
+                    <div class="tright">
+                      <p class="tcenter bottom-line goals"> {{goal.goalTitle}} <sup class="close"><i class="icon icon-close" ng-click="removeGoal($index)"></i></sup></p>
+                    </div>
+                    <span id="goalDescription{{$index}}" style="display:none;">
+                        <p class="pink tcenter goals" ng-if="goal.goalDescription">
+                          {{goal.goalDescription}}
+                        </p>
+                        <button class="uppercase goals" ng-click="resumeGoal(goal)">Start</button>
+                    </span>
+                </div>
+            </div>
+        </span>
+
+
+        <div class="row last-row"></div>
+
+    </ion-scroll>
+	<div class="bar bar-footer margin0 padding0">
+    	<div class="col col-top margin0 padding0">
+			<div class="bottom-bar-fixed"></div>
+         </div>
+	</div>
+  </ion-content>
+</ion-view>

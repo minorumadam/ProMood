@@ -1,0 +1,58 @@
+/*
+ * Created with iconvau.lt
+ */
+
+@font-face {
+  font-family: "promood-icons";
+  src: url("../fonts/icons/iconvault_b925f529eaeeb917f1e676375957732a.eot");
+  src: url("../fonts/icons/iconvault_b925f529eaeeb917f1e676375957732a.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/icons/iconvault_b925f529eaeeb917f1e676375957732a.woff") format("woff"),
+       url("../fonts/icons/iconvault_b925f529eaeeb917f1e676375957732a.ttf") format("truetype"),
+       url("../fonts/icons/iconvault_b925f529eaeeb917f1e676375957732a.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-exit:before,
+.icon-home:before,
+.icon-target-shooting:before,
+.icon-menu:before,
+.icon-multiple-user:before,
+.icon-info:before,
+.icon-user:before,
+.icon-disc:before,
+.icon-cancel:before,
+.icon-chat-balloon:before,
+.icon-skinny-close:before,
+.icon-close:before,
+.icon-hat:before,
+.icon-check:before,
+.icon-config:before,
+.icon-plus:before {
+  font-family: "promood-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.icon-exit:before { content: "\f100"; }
+.icon-home:before { content: "\f101"; }
+.icon-target-shooting:before { content: "\f102"; }
+.icon-menu:before { content: "\f103"; }
+.icon-multiple-user:before { content: "\f104"; }
+.icon-info:before { content: "\f105"; }
+.icon-user:before { content: "\f106"; }
+.icon-disc:before { content: "\f107"; }
+.icon-cancel:before { content: "\f108"; }
+.icon-chat-balloon:before { content: "\f109"; }
+.icon-skinny-close:before { content: "\f10a"; }
+.icon-close:before { content: "\f10b"; }
+.icon-hat:before { content: "\f10c"; }
+.icon-check:before { content: "\f10d"; }
+.icon-config:before { content: "\f10e"; }
+.icon-plus:before { content: "\f10f"; }

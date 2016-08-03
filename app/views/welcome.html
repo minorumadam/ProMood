@@ -1,0 +1,45 @@
+<ion-view title="<span>Pro</span>Mood" class="animate-welcome"><!-- AGREGAR LA CLASE animate-welcome INICIA LA ANIMACION -->
+  <ion-content has-bouncing="false" scroll="false">
+    <div class="row row-center height55 body-welcome">
+      <div class="col col-center">
+        <h3 class="welcome-title">Hi {{user.name}}!</h3>
+        <h3>How are you<br>feeling today?</h3>
+      </div>
+    </div>
+
+	<span id="faceSpan" class="active-{{ color }}-face" on-drag-left="dragLeft($event)" on-drag-right="dragRight($event)">
+      <div class="row row-center height10 padding0">
+        <div class="col col-top padding0" id="color-bar">
+          <div class="color-bar bar-welcome-{{ color }} welcome-spans">
+            <div>
+              <ul id="feeling-text">
+                <li ng-repeat="feeling in feelings" class="welcome-spans {{ feeling.color }}">{{ feeling.name }}</li>
+              </ul>
+            </div>
+                <span class="yellow welcome-spans no-after-span" >
+						<svg id="triangulo1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve"><polygon class="svg-triangle" fill="#E6274C" points="20,0 10,10 0,0 "/></svg>
+                </span>
+                <span class="pink welcome-spans no-after-span" >
+						<svg id="triangulo2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve"><polygon class="svg-triangle" fill="#E6274C" points="20,0 10,10 0,0 "/></svg>
+                </span>
+
+                <span class="blue welcome-spans no-after-span" >
+						<svg id="triangulo3" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve"><polygon class="svg-triangle" fill="#E6274C" points="20,0 10,10 0,0 "/></svg>
+                </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-bottom padding0 height40" id="carita">
+        <div nav-clear ng-repeat="feeling in feelings" class="col little-faces" ng-click="goToState($index, feeling)"><img id="carita{{$index}}" src="{{feeling.image}}" alt="{{feeling.name}}" title="{{feeling.name}}"></div>
+      </div>
+      
+      
+    </span>
+
+        <div class="div-transition" ></div>
+
+  </ion-content>
+</ion-view>
+
+

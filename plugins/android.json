@@ -1,0 +1,78 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.hutchind.cordova.plugins.streamingmedia": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "de.appplant.cordova.common.registerusernotificationsettings": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "de.neofonie.cordova.plugin.nativeaudio": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "nl.x-services.plugins.insomnia": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        },
+        "cordova-plugin-zip": {
+            "PACKAGE_NAME": "com.promood.promoodapp"
+        }
+    },
+    "dependent_plugins": {}
+}

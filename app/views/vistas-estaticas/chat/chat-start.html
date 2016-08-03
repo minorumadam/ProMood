@@ -1,0 +1,28 @@
+<ion-view title="<span>Chat</span>">
+  <ion-content has-bouncing="false">
+    <ion-scroll scroll="auto" class="height100" has-bouncing="false">
+      <div class="color-bar-striped tleft">Anonymous<span class="rating">
+        <!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
+      </span><span class="view-profile">View Profile</span></div>
+
+
+      <div class="row">
+        <div class="col">
+
+          <div class="bottom-line" ng-repeat="message in messages">
+            <p class="" ng-class="{tleft: message.origin == 'send',  pink: message.origin == 'send', tright: message.origin == 'receive', blue: message.origin == 'receive'}">{{message.data}}</p>
+            <div class="hour-chat fright">{{message.time|date:timeShort}} <span></span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row last-row"></div>
+  </ion-scroll>
+  <div class="bar bar-footer">
+    <div class="col col-top">
+      <input type="text" id="textInput" ng-model="msg"/>
+      <input type="button" value="Send" id="btnSend" ng-click="send(msg)"/><br />
+    </div>
+  </ion-content>
+</ion-view>

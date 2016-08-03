@@ -1,0 +1,181 @@
+{
+  "E": [5, 7, 10, 13, 23, 25, 61, 68, 71],
+
+  "I": [2, 9, 49, 54, 63, 65, 67, 69, 72],
+
+  "S": [15, 43, 45, 51, 53, 56, 59, 66, 70],
+
+  "N": [37, 39, 41, 44, 47, 52, 57, 62, 64],
+
+  "T": [1, 4, 6, 18, 20, 48, 50, 55, 58],
+
+  "F": [3, 8, 11, 14, 27, 31, 33, 35, 40],
+
+  "J": [19, 21, 24, 26, 29, 34, 36, 42, 46],
+
+  "P": [12, 16, 17, 22, 28, 30, 32, 38, 60],
+
+  "state": [
+    ["E", "I"],
+    ["S", "N"],
+    ["T", "F"],
+    ["J", "P"]
+  ],
+
+  "questions": [
+    "You take pride in your objectivity, despite the fact that some accuse you of being cold and indifferent.",
+    "You need to regain energy alone after meetings, phone calls or socialization; the more intense the meeting is, the more exhausted you feel afterwards.",
+    "You think love cannot be defined; you feel offended by those who try to do so.",
+    "You do not mind making tough decisions and you do not understand why some people are upset by things that are not relevant to the issue being addressed.",
+    "You tend to speak first and think later; you frequently tell yourself off by saying things like \"Will I ever learn to keep my mouth shut?\" ",
+    "You remember numbers and figures more easily than faces and names.",
+    "You know many people and you consider many of them close friends; you like to include as many people as possible in your activities.",
+    "You consider a good decision the one which takes into account the feelings of others.",
+    "You rehearse things before you express them; you often answer \"I will think about it\" or \"I will give you an answer later.\" ",
+    "You do not mind reading or having a conversation while you do another activity (such as holding a conversation, watching TV, listening to the radio, etc.); You may actually remain indifferent to this distraction.",
+    "You do not doubt to take it back if you perceived you have offended anyone; you are therefore sometimes accused of having no convictions.",
+    "You do not like being forced to make decisions; you prefer to keep your options open.",
+    "You are easily accessible and you may maintain conversation with friends, co-workers and strangers and you may have a dominant role in the conversation.",
+    "You prefer harmony to clarity; conflict overwhelms you and you try to avoid it. You may say “let’s change the subject” or “let’s hold hands and let’s all be friends again\".",
+    "You feel frustrated when people give unclear instructions or when someone says \"this is the general plan, we will deal with the details later.\"",
+    "You tend to change the topic of the conversation frequently; the new topic can be something that comes to mind or that attracts your attention at that moment.",
+    "You tend not to consider things as conclusive, though this is not always the case.",
+    "You prefer to be right than to be liked; you do not need to like people to work with them and do a good job.",
+    "You do not like surprises and you let everyone know this.",
+    "You tend to give more credit to logical and scientific things. For example, until you receive further information to justify the benefits of this test, you will remain skeptical about its usefulness.",
+    "You make lists and you use them; if you do something that is not on your list, it is possible that you add it just to cross it out.",
+    "You turn work into fun; if a job cannot be something entertaining, it is probably not worth doing it.",
+    "Listening is more difficult than talking for you; you like being the star of the conversation, and you get bored when you cannot participate actively.",
+    "You enjoy order; you have your special way to store things on your desk or in your files, or to hang things on the walls.",
+    "You prefer to generate ideas in a group rather than on your own; you feel exhausted if you spend too much time pondering without having the chance to exchange ideas with others.",
+    "You are often accused of being angry when you are not; it is just your way of expressing your opinion.",
+    "You enjoy providing necessary services to people, although some may take advantage of you.",
+    "You are easily distracted; you may get \"lost\" on your way from the front door to the car.",
+    "You like completing a job until you finish it and getting rid of it even when you know you may have to do it again later to get it right.",
+    "You love exploring the unknown, even if it is something as simple as the way home from work.",
+    "You go beyond your limits trying to satisfy the needs of others; you will do almost anything to accommodate others even at the expense of your own comfort.",
+    "You do not plan a task until you see what is required; people accuse you of being disorganized although you know better what to do.",
+    "You step on the shoes of others; You are the one who, in a meeting, will probably wonder how a decision will affect the people involved.",
+    "There is one proper place for everything and you do not feel satisfied until everything is in place.",
+    "You often wonder if anyone cares about what you want, although you may have difficulty telling someone.",
+    "You always have to wait for the others, who never seem to be on time.",
+    "You think that talking about boring details is a waste of time.",
+    "You depend on your adrenaline rush at the last minute to meet your deadlines; you usually meet the deadline although you drive everyone crazy to achieve it.",
+    "You think of several things at the same time; your friends and colleagues will often say that you are \"absent\".",
+    "You remember faces and the circumstances in which you met someone more easily that the person’s name.",
+    "You find the future and your possibilities interesting, rather than frightening; you are generally more attracted to where you are going than to where you are now.",
+    "You \"know\" that if everyone did what they are supposed to do (and when they are supposed to do it) the world would be a better place.",
+    "You have the idea that you have to see to believe; If anyone tells you that the mail has came, you do not believe it until you have it on your desk.",
+    "You believe that time is relative; time does not matter, unless the meeting, dinner or event has started without you.",
+    "You use the words literally; you often need to ask if what people say is serious or a joke.",
+    "You wake up in the morning and you know pretty well how your day is going to be; you have an agenda and you follow it; you may be altered if things do not go as planned.",
+    "You are interested in how things work just for fun.",
+    "You like showing your point of view for clarity; you tend to discuss both points of view in a debate simply to expand your intellectual horizons.",
+    "You like to express your thoughts and ideas without interruptions; you let others do the same, hoping it will be reciprocated.",
+    "You are able to stay cool, calm and objective in situations where everyone is upset.",
+    "You find it easier to see the wood for the trees; you are happy to concentrate on your work and you do not worry about how it fits into a larger scheme.",
+    "You have an inclination for jokes and puns.",
+    "The jobs that produce tangible results are more satisfying for you; you would rather clean your desk than think about what lies ahead in your career.",
+    "You wish you could impose your ideas harder. It bothers when others say the things you were about to say before you.",
+    "You would rather settle a dispute based on what is right and true rather than on what makes people happy.",
+    "You prefer specific answers to specific questions; when you ask for the time, you prefer to be told \"it is 3:42,\" rather than \"some minutes before 4\" or \"it's time to leave.\" ",
+    "You prefer to imagine how to spend your next salary rather than to balance your bank account.",
+    "You are a person of strong ideas more than of a tender heart; if you disagree, you prefer to say it, instead of keeping quiet and having them believe that you agree.",
+    "You like to concentrate on what you are doing now and you usually do not care what happens next; what is more, you would rather do something than think about it.",
+    "You do not believe neatness is important, but you prefer to have things in order; what is important for you is creativity, spontaneity and responsiveness.",
+    "You need the approval of senior colleagues and subordinates regarding who you are, what you do, how you look and almost anything else; you may think you do a good job but until you hear someone tell you that, you will not really believe it.",
+    "You find it more attractive to look for the underlying relationships and connections than to accept things as they are; You are always asking for the meaning.",
+    "It is possible that you believe that those who talk a lot are charlatans.; when you hear other conversations you may consider that they are wasting their time.",
+    "You tend to give general answers to questions; you do not understand why so many people cannot follow your instructions and you get irritated when people press you in search of specifications.",
+    "You are considered a great listener, but you feel that others take advantage of that.",
+    "You think that fantasy is a dirty word; you do not trust people who seem to devote too much time to playing with their imagination.",
+    "You have sometimes been described as shy; whether you agree or not, you may appear to others as someone reserved and thoughtful.",
+    "You consider that telephone calls are welcomed interruptions; you do not hesitate to use the phone when you have something to say or need to see someone.",
+    "You like sharing special occasions with just one person or perhaps a few close friends.",
+    "You prefer results with facts and numbers to results with ideas and theories; you prefer to hear things sequentially and not randomly.",
+    "You like attending meetings and you tend to express your views; you actually feel frustrated if you are not given the opportunity to express your point of view.",
+    "You enjoy the peace and quiet of having time for yourself; you find that your private time is easily invaded and you tend to adapt by developing a high power of concentration."
+  ],
+
+	"ISTJ": {
+		"title" : "Doing what should be done",
+		"characteristics" : ["Organizer", "Compulsive", "Private", "Trustworthy", "Rules'n regs", "Practical"],
+		"most" : "MOST RESPONSABLE"
+	},
+	"ISFJ": {
+		"title" : "A high sense of duty",
+		"characteristics" : ["Amiable","Works behind the scenes","Ready to sacrifice","Accountable","Prefers \"doing\""],
+		"most" : "MOST LOYAL"
+	},
+	"INFJ": {
+		"title" : "An inspiration to others",
+		"characteristics" : ["Reflective/Introspective", "Quietly caring", "Creative", "Linguistically Gifted","Psychic"],
+		"most" : "MOST CONTEMPLATIVE"
+	},
+	"INTJ": {
+		"title" : "Everything has room for improvement",
+		"characteristics" : ["Theory based","Skeptical","\"My way\"","High need for competency", "Sees world as chessboard"],
+		"most" : "MOST INDEPENDENT"
+	},
+	"ISTP": {
+		"title" : "Ready to try anything once",
+		"characteristics" : ["Very observant","Cool an Aloof","Hands-on practically","Unpretentious","Ready for what happens"],
+		"most" : "MOST PRAGMATIC"
+	},
+	"ISFP": {
+		"title" : "Sees much but shares little",
+		"characteristics" : ["Warm and sensitive","Unassuming","Short range planner","Good team member","In touch with self and nature"],
+		"most" : "MOST ARTISTIC"
+	},
+	"INFP": {
+		"title" : "Performing noble service to aid society",
+		"characteristics" : ["Strict personal values","Seeks inner order/peace","Creative","Non-directive","Reserved"],
+		"most" : "MOST IDEALISTIC"
+	},
+	"INTP": {
+		"title" : "A love of problem solving",
+		"characteristics" : ["Challenges others to think","Absent-minded professor","Competency needs","Socially cautious"],
+		"most" : "MOST CONCEPTUAL"
+	},
+	"ESTP": {
+		"title" : "The ultimate realist",
+		"characteristics" : ["Unconventional approach","Fun","Gregarious","Lives for here and now", "Good at problem solving"],
+		"most" : "MOST SPONTANEOUS"
+	},
+	"ESFP": {
+		"title" : "You only go around once in life",
+		"characteristics" : ["Sociable","Spontaneous","Loves surprises","Cuts red tape","Juggles multiple projects/events","Quip master"],
+		"most" : "MOST GENEROUS"
+	},
+	"ENFP": {
+		"title" : "Giving life an extra squeeze",
+		"characteristics" : ["People oriented","Creative","Seeks harmony","Life of party","More starts than finishes"],
+		"most" : "MOST OPTIMISTIC"
+	},
+	"ENTP": {
+		"title" : "One exciting challenge after another",
+		"characteristics" : ["Argues both sides of a point of learn","Brinkmanship","Tests the limits","Enthusiastic", "New ideas"],
+		"most" : "MOST INVENTIVE"
+	},
+	"ESTJ": {
+		"title" : "Life's administrators",
+		"characteristics" : ["Order and structure","Sociable","Opinionated","Results driven","Producer","Traditional"],
+		"most" : "MOST HARD CHARGING"
+	},
+	"ESFJ": {
+		"title" : "Host and hostesses of the world",
+		"characteristics" : ["Gracious","Good interpersonal skills","Thoughtful","Appropriate","Eager to please"],
+		"most" : "MOST HARMONIZING"
+	},
+	"ENGJ": {
+		"title" : "Smooth talking persuader",
+		"characteristics" : ["Charismatic","Compassionate","Possibilities for people","Ignores the unpleasant","Idealistic"],
+		"most" : "MOST PERSUASIVE"
+	},
+	"ENTJ": {
+		"title" : "Life's natural leaders",
+		"characteristics" : ["Visionary","Gregarious","Argumentative","Systems planners","Take Charge","Low tolerance for incompetency"],
+		"most" : "MOST COMMANDING"
+	}
+
+}

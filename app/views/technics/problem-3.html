@@ -1,0 +1,19 @@
+<div class="color-bar-blue-striped" style="margin-bottom:9px;">Step Three</div>
+<div class="row row-center">
+  <div class="col">
+    <h5 class="violet">Exploration of Ideas</h5>
+    <p>What could you do to overcome this challenge?</p>
+    <p>It is essential to create many ideas in order to come up with a good one. Brainstorm and write each idea on different fields:</p>
+  </div>
+</div>
+<div class="row row-bottom" ng-repeat="idea in problem.ideas" on-last-repeat>
+  <div class="col">
+    <textarea placeholder="Write here" class="msd-elastic italic bottom-line violet text-size min-height-inherit tcenter" ng-model="idea.name" rows="1"></textarea>
+    </div>
+  </div>
+  <div class="row row-top height7">
+    <div class="col height100" ng-click="problemAddIdea()">
+      <p class="height100 tcenter" ><img class="pink" src="svg/circle-plus.svg" alt="+"></p>
+    </div>
+  </div>
+<div class="row last-row"></div>

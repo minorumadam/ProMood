@@ -1,0 +1,41 @@
+<span id="second-animations">
+	<div class="color-bar-title-striped-pink">word, thought and sensation</div>
+    <ion-scroll class="height100 has-subheader" scroll="auto" on-swipe-right="onSwipeRight()" has-bouncing="false">
+    	<span class="over-bg-w">
+                <div class="row row-center">
+                    <div class="col col-center">
+                        <h4>We are pleased you're feeling good {{user.name}}!</h4><br>
+                        <p>If you let us, we will give you some tips so that you turn these feelings into a part of your inner natural resources. For that, we propose a series of steps that will lead you to find patterns that are directly related to how you feel.
+             <p>The first step is to write <strong>one word</strong> (any word that comes to mind that you can relate to your happines), <strong>one thought, and one physical sensation</strong> that you are having at the present moment. The goal is to identify patterns that manifest when you feel good, and use them when for some reason you are not feeling so good.
+            <p style="text-align: center;"><span id="continueMessage">Please type in the following fields:</span>
+						<p style="text-align: center;"><span class="hide pink" id="errorContinueMessage">Please fill all the fields to continue:</span>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col col-center">
+                        <input dir="ltr" placeholder="Word" class="input-feeling-good" ng-model="data.word">
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col col-center">
+                        <input dir="ltr" placeholder="Thought" class="input-feeling-good" ng-model="data.thought">
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col col-center">
+                        <input dir="ltr" placeholder="Sensation" class="input-feeling-good" ng-model="data.sensation">
+                    </div>
+                </div>
+            
+                <div class="row last-row subheader"></div>
+    
+        </span>
+
+	</ion-scroll>
+</span>
+    <div class="bar bar-footer margin0 padding0">
+    	<div class="col col-top margin0 padding0">
+			<button class="move" ng-click="goToPhotography()">continue</button>
+			<div class="bottom-bar-fixed"></div>
+         </div>
+	</div>

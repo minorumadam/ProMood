@@ -1,0 +1,36 @@
+<div class="color-bar-blue-striped">Step Four</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Compare Points of View</h5>
+  </div>
+</div>
+<div class="row row-bottom fsize-small">
+  <div class="col col-center" style="text-align: justify">
+    Compare both descriptions, yours and your reference's, analyze them and write down the differences. Do not seek to justify your attitude or mindset. Just evaluate if he may be right in this approach, and if you, for being more involved, are being a little biased:
+  </div>
+</div>
+
+<p></p>
+<div class="worry-diff">
+	<span ng-repeat="compare in worry1.diff">
+        <div class="row row-center bg-violet min-text-size bottom-line tleft" style="color:#fff; padding:12px 20px;">
+          {{compare.worry.name}}
+        </div>
+        <div ng-show="compare.referent.name" class="row row-center bg-pink min-text-size bottom-line tleft" style="color:#fff; padding:12px 20px;">
+          {{compare.referent.name}}
+        </div>
+    </span>
+</div>
+
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Write the differences</h5>
+  </div>
+</div>
+<div class="row row-bottom height60 margin0 padding0">
+  <div class="col col-bottom height100 padding0">
+    <div class="paper-bg height100">
+      <textarea placeholder="Write here" class="handwritten" ng-model="worry1.differences"></textarea>
+    </div>
+  </div>
+</div>

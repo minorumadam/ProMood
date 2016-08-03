@@ -1,0 +1,22 @@
+<div class="color-bar-blue-striped">Step One</div><span class="help-icon-rounded-not-good top-right-button" ng-click="postpone(technic)"><img src="svg/postpone-icon-rounded.svg"></span>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Why are you worried?</h5>
+  </div>
+</div>
+<div class="row row-bottom fsize-small">
+  <div class="col col-center" style="text-align: justify">
+    <p>Analize the situation that worries or concerns you. Write down everything that you think will happen on the following fields with as much detail as possible:</p>
+  </div>
+</div>
+<div class="row row-bottom" ng-repeat="worry in worry1.worries" on-last-repeat>
+  <div class="col col-bottom">
+    <textarea placeholder="Write here" dir="ltr" class="msd-elastic italic bottom-line violet tcenter text-size min-height-inherit" placeholder="{{worry.name}}" ng-model="worry.name" rows="1"></textarea>
+  </div>
+</div>
+<div class="row row-top height10">
+  <div class="col col-top height100">
+    <p class="height100 tcenter"><img class="pink" src="svg/circle-plus.svg" alt="+" ng-click="worry1Add()"></p>
+  </div>
+</div>
+<div class="row last-row"></div>

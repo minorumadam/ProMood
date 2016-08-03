@@ -1,0 +1,41 @@
+<style type="text/css">.row + .row {
+    margin-top: 0 !important;
+}</style>
+<ion-view hide-nav-bar="true">
+    <ion-content class="over-bg-t" on-swipe-right="onSwipeRight()" has-bouncing="false" scroll="false">
+        <div class="row row-top height25 margin0 padding0">
+            <div class="col col-top margin0 padding0">
+                <div class="bar bar-header"
+                     style="position:relative; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); text-shadow: -1px -1px 1px #ffffff; text-transform: uppercase">
+                    <h1 class="title">Personality Type</h1></div>
+                <div class="color-bar-title-striped-pink top-44">Test</div>
+            </div>
+        </div>
+        <ion-slide-box show-pager="false" class="height60" ng-if="questions" on-slide-changed="slideChanged()">
+            <ion-slide ng-repeat="qu in questions">
+                <div ng-if="$index >= (currentSlide-1) && $index <= (currentSlide+1)">
+
+                    <div class="row row-center height21 margin0 padding0">
+                        <div class="col col-bottom">
+                            <div class="test-number">
+                                <div>
+                                    <div>{{$index + 1}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-center margin0 padding0">
+                        <div class="col col-top height100">
+                            <quote class="personality-test">{{qu}}</quote>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="row row-bottom height15 margin0 padding0 justify-center">
+            <div nav-clear="" menu-close="" class="col col-bottom test-answer" ng-click="answerNo()">No</div>
+            <div nav-clear="" menu-close="" class="col col-bottom test-answer" ng-click="answerYes()">Yes</div>
+        </div>
+        <div class="bottom-bar-fixed"></div>
+    </ion-content>
+</ion-view>

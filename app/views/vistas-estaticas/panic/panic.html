@@ -1,0 +1,262 @@
+<ion-view title="<span class='violet'>Panic Attack</span>">
+  <ion-content scroll="false" class="panic">
+        <div class="color-bar-blue-striped">Follow Through</div>
+        <script>
+		
+		var startEnabled = false;
+
+     enableStart = function() {
+       startEnabled = true;
+     }  
+        	var tl = new TimelineLite();
+				
+			tl.from(".panic-paso-container-1", 2, {autoAlpha:0, repeat:1, yoyo:true, display:'none'})
+ 			.to(".panic-paso-container-1", 0, {display:'none'})
+			.from(".panic-paso-container-2", 2, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-2", 0, {display:'none'})
+			.from(".panic-paso-container-3", 4, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-3", 0, {display:'none'})
+			.from(".panic-paso-container-4", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-4", 0, {display:'none'})
+			.from(".panic-paso-container-5", 3, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-5", 0, {display:'none'})
+ 			.from(".panic-paso-container-6", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-6", 0, {display:'none'})
+ 			.from(".panic-paso-container-7", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-7", 0, {display:'none'})
+ 			.from(".panic-paso-container-8", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-8", 0, {display:'none'})
+ 			.from(".panic-paso-container-9", 8, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-9", 0, {display:'none'})
+ 			.from(".panic-paso-container-10", 4, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-10", 0, {display:'none'})
+ 			.from(".panic-paso-container-11", 4, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-11", 0, {display:'none'})
+ 			.from(".panic-paso-container-12", 5, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=2")
+ 			.to(".panic-paso-container-12", 0, {display:'none'})
+ 			.from(".panic-paso-container-13", 5, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=2")
+ 			.to(".panic-paso-container-13", 0, {display:'none'})
+ 			.from(".panic-paso-container-14", 5, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=2")
+ 			.to(".panic-paso-container-14", 0, {display:'none'})
+ 			.from(".panic-paso-container-15", 7, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=2")
+ 			.to(".panic-paso-container-15", 0, {display:'none'})
+ 			.from(".panic-paso-container-16", 5, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=3")
+ 			.to(".panic-paso-container-16", 0, {display:'none'})
+ 			.from(".panic-paso-container-17", 5, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=3")
+ 			.to(".panic-paso-container-17", 0, {display:'none'})
+ 			.from(".panic-paso-container-18", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-18", 0, {display:'none'})
+ 			.from(".panic-paso-container-19", 7, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-19", 0, {display:'none'})
+ 			.from(".panic-paso-container-20", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-20", 0, {display:'none'})
+			.from(".panic-paso-container-21", 6, {autoAlpha:0, repeat:1, yoyo:true, display:'none'}, "-=0.25")
+ 			.to(".panic-paso-container-21", 0, {display:'none'})
+			.from(".panic-paso-container-22", 14, {autoAlpha:0}, "-=0.25")
+			.addPause(2, function(){
+			  console.log('paused');
+			  enableStart();
+			} )
+
+			
+		</script>
+
+              <div class="panic-steps-container row row-center height100 padding0">
+                
+                
+                   <div class="panic-paso-container panic-paso-container-1 col col-center panic-paso-text panic-paso-1">
+                    	<div class="fade-in-out panic-paso-container">                   
+                                <h2 ng-click="startClicked()"><br><br>Start<br><br></h2>
+                         </div>
+                    </div>
+                    
+                    <div class="panic-paso-container panic-paso-container-2 col col-center opacity-0">
+                    	<div class="panic-paso-text panic-paso-2">
+                               <h2><br>Take a deep<br> 
+                               breath<br> 
+                               through<br> 
+                               your nose</h2>
+                         </div>
+                    </div>
+                	
+                	<div class="panic-paso-container panic-paso-container-3 col col-center opacity-0">
+                        <div class="panic-paso-text panic-paso-3">
+                                <h2><br>Now slowly<br> 
+                                exhale<br> 
+                                through<br> 
+                                your mouth</h2>
+                        </div>
+                    </div>         
+                            
+                    <div class="panic-paso-container panic-paso-container-4 col col-center opacity-0">
+                        <div class="panic-paso-text panic-paso-4">
+                               <h2> 
+	                               <br>
+                                    Inhale:<br> 
+                                    <span>1,2</span><br> 
+                                    Exhale:<br> 
+                                    <span>1,2</span>
+                                </h2>
+                        </div>
+                     </div>
+                     <div class="panic-paso-container panic-paso-container-5 col col-center opacity-0">
+                         <div class="panic-paso-text panic-paso-5">
+                                <h2>
+                                	What you<br>
+                                    feel now will<br> 
+                                    <span>go away</span><br>
+                                     and you will<br> 
+                                     <span>feel better</span>
+                                </h2>
+                        </div>
+                    </div>
+					<div class="panic-paso-container panic-paso-container-6 col col-center opacity-0">
+                                <div class="panic-paso-text panic-paso-6">
+                                        <h2> 
+                                        	<br>
+                                            Inhale:<br> 
+                                            <span>1,2</span><br> 
+                                            Exhale:<br> 
+                                            <span>1,2</span>
+                                        </h2>
+                                </div>
+                           </div>
+                           <div class="panic-paso-container panic-paso-container-7 col col-center opacity-0">
+                               <div class="panic-paso-text panic-paso-7">
+                                        
+                                        <h2>
+                                        <span class="headline">AGAIN,</span><br> 
+                                            Inhale:<br> 
+                                            <span>1,2</span><br> 
+                                            Exhale:<br> 
+                                            <span>1,2</span>
+                                        </h2>
+                                </div>
+                             </div>
+                             <div class="panic-paso-container panic-paso-container-8 col col-center opacity-0">   
+                                 <div class="panic-paso-text panic-paso-8">
+                                        
+                                        <h2> 
+                                        <span class="headline">once more,</span><br>  
+                                            Inhale:<br> 
+                                            <span>1,2</span><br> 
+                                            Exhale:<br> 
+                                            <span>1,2</span>
+                                        </h2>
+                                </div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-9 col col-center opacity-0">
+                                <div class="panic-paso-text panic-paso-9">
+                                        <h2> 
+                                            <span class="headline">one last,</span><br> 
+                                            Inhale:<br> 
+                                            <span>1,2</span><br> 
+                                            Exhale:<br> 
+                                            <span>1,2</span>
+                                        </h2>
+                                </div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-10 col col-center opacity-0">
+                                <div class="panic-paso-text panic-paso-10">
+                                        <h2>Focus on<br> 
+                                        your<br> 
+                                        <span>respiration</span><br> 
+                                        and the<br> 
+                                        <span>sound</span></h2>
+                                </div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-11 col col-center height100 opacity-0">
+                                <div class="panic-paso-text panic-paso-11">
+                                        <h2><br>keep<br>
+                                            <span>breathing</span><br>
+                                            calmly and<br> 
+                                            focus your<br> 
+                                            attention on<br>
+                                            the following<br> 
+                                            <span>images</span>
+                                        </h2>
+                                </div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-12 col col-center height100 opacity-0">
+                                <div class="panic-paso-image fade-in-out-images" id="panic-paso-12">&nbsp;</div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-13 col col-center height100 opacity-0">
+                                <div class="panic-paso-image fade-in-out-images" id="panic-paso-13">&nbsp;</div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-14 col col-center height100 opacity-0">
+                                <div class="panic-paso-image fade-in-out-images" id="panic-paso-14">&nbsp;</div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-15 col col-center height100 opacity-0">
+                                <div class="panic-paso-image fade-in-out-images" id="panic-paso-15">&nbsp;</div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-16 col col-center height100 opacity-0">
+                                <div class="panic-paso-image fade-in-out-images" id="panic-paso-16">&nbsp;</div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-17 col col-center height100 opacity-0">
+                                <div class="panic-paso-image fade-in-out-images" id="panic-paso-17">&nbsp;</div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-18 col col-center height100 opacity-0">
+                                <div class="panic-paso-text panic-paso-18">
+                                        
+                                        <h2> 
+                                            <span class="headline">Again,</span><br> 
+                                            Inhale:<br> 
+                                            <span>1,2</span><br> 
+                                            Exhale:<br> 
+                                            <span>1,2</span>
+                                        </h2>
+                                </div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-19 col col-center height100 opacity-0">
+                                <div class="panic-paso-text panic-paso-19">
+                                        
+                                        <h2> 
+                                            <span class="headline">Once more,</span><br> 
+                                            Inhale:<br> 
+                                            <span>1,2</span><br> 
+                                            Exhale:<br> 
+                                            <span>1,2</span>
+                                        </h2>
+                                </div>
+                            </div>
+                            <div class="panic-paso-container panic-paso-container-20 col col-center height100 opacity-0">
+                                <div class="panic-paso-text panic-paso-20">
+                                        <h2>your brain<br> 
+                                        begins to<br> 
+                                        <span>calm down</span></h2> 
+                                        <h2>pay attention<br> 
+                                        to the <span>beeps</span><br> 
+                                        in your ears</h2>
+                                </div>
+                           </div>
+                   <div class="panic-paso-container panic-paso-container-21 col col-center height100 opacity-0">
+                       <div class="panic-paso-text panic-paso-21">
+                                
+                                <h2> 
+                                    <span class="headline">one last time</span><br>
+                                    Inhale:<br> 
+                                    <span>1,2</span><br> 
+                                    Exhale:<br> 
+                                    <span>1,2</span>
+                                </h2>
+                        </div>
+                     </div>
+                     
+                     <div class="panic-paso-container panic-paso-container-22 col col-center height100 opacity-0">
+                         <div class="panic-paso-text panic-paso-22 fade-in" style="z-index: 1001">
+                                <h2>
+                                Do you<br> 
+                                feel more<br> 
+                                relaxed?
+                                </h2><br>                 	
+                                <button class="pink" ng-click="goToWelcome();">Yes</button><button ng-click="startFrom4();">No</button>
+                        </div>
+                     </div>
+                             
+                    
+                   
+                </div> <!-- ENDS panic-steps-container--> 
+           <!--  </div>ENDS col-center -->             
+           <!--</div> ENDS row-center -->
+  </ion-content>
+</ion-view>

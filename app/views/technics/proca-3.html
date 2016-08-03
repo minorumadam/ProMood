@@ -1,0 +1,34 @@
+<div class="color-bar-blue-striped">Step Two</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Divide in Subtasks</h5>
+    <p>Let's suppose you have to do a project for next week, so you add "Make project" to your list of tasks. At first sight there's nothing wrong with this, however you have to be careful, for this is a mistake that encourages procrastination. You'd be surprised how many tasks we abandon or put off just because we treat them as if they were indivisible.</p>
+    <p class="tcenter">Break down large tasks into subtasks until you can do one of them in a single day.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-center">
+    <p class="tcenter"> Tap on the <span class="bold pink uppercase tap-plus">+</span> to add subtasks:</p>
+  </div>
+</div>
+<span ng-repeat="task in procastination.tasks">
+<div class="row row-bottom">
+  <div class="col col-bottom">
+    <p class="tcenter italic bottom-line violet"><quote>{{task.name}}</quote>
+    </p>
+    <div ng-repeat="subtask in task.subtasks" on-last-repeat>
+      <textarea placeholder="Write here" placeholder="Subtask" class="msd-elastic pink tcenter bold-subtask margin0 no-bg text-size min-height-inherit" ng-model="subtask.name" rows="1"></textarea>
+    </div>
+  </div>
+
+</div>
+    <div class="row row-top height7">
+      <div class="col col-top height100">
+        <p class="height100 tcenter" ng-click="procastinationAddSubtask(task)"><img alt="+" src="svg/circle-plus.svg" class="pink"></p>
+      </div>
+    </div>
+
+<div class="row height5"></div><!-- DIV SEPARADOR -->
+</span>
+
+<div class="row last-row"></div>

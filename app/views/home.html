@@ -1,0 +1,181 @@
+<ion-view hide-nav-bar="true">
+  <ion-content scroll="false" class="intro height100" has-bouncing="false">
+    <ion-slide-box does-continue="false" show-pager="false" on-slide-changed="slideChanged($index)" class="height100">
+      <ion-slide ng-if="step >= 1">
+          <ion-scroll scroll="auto" class="row row-top height100 margin0 padding0" has-bouncing="false">
+                <div class="bg-logo-intro margin0 padding0" style="min-height:100%; padding:0 3%;">
+                    <div class="row" style="height:100vh; margin-bottom:8vh !important;">
+                        <div class="col col-center">
+                            <img class="logo-intro" src="svg/logo-intro.svg" alt="ProMOOD">
+                        </div>
+      		        </div>
+                    <div id="welcomeTitle"></div>
+                    <div class="row row-top" style="margin-bottom:8%">
+                        <div class="col col-top">
+                            <h2 class="pink">Welcome</h2>
+                        </div>
+                    </div>
+                    <div class="row row-top">
+                        <div class="col col-top">
+                        	<p class="tcenter" style="margin-bottom:5px;">And thanks for having choosen <strong class="bold">proMood</strong>.
+<p class="tcenter">
+You have just taken your first step into the world of conscious well-being.
+<p class="tcenter">
+For most of the people the mood is something that just occurs, something over which we have no control...
+
+                        </div>
+                    </div>
+                    <div class="row row-center">
+                        <div class="col col-center">
+                        	<h4 class="font-book">Nothing could be further
+ from the truth.</h4>
+                        </div>
+                    </div>
+                    <div class="row row-top">
+                        <div class="col col-top">
+                        	<p class="tcenter">Our moods are malleable and you can learn how to change, improve and enhance them consciously.
+                        </div>
+                    </div>
+                    <div class="row row-center" style="padding:6% 0;">
+                        <div class="col col-center">
+                        	<img title="So-So" alt="So-So" src="svg/not-so-good.svg" style="width:90%">
+                        </div>
+                        <div class="col col-center">
+                        	<img title="Feeling Great!" alt="Feeling Great!" src="svg/i-feel-good.svg" style="width:90%">
+                        </div>
+                        <div class="col col-center">
+                        	<img title="Not Good" alt="Not Good" src="svg/not-so-bad.svg" style="width:90%">
+                        </div>
+                    </div>
+                    <div class="row row-center">
+                        <div class="col col-center">
+                        	<h4 class="font-book pink">We created proMood for
+ this great purpose.</h4>
+                        </div>
+                    </div>
+                    <div class="row row-top">
+                        <div class="col col-top">
+                        	<p>But for the app to be really useful we need to know more about your personality, that's why this first time we will ask you for a little patience to perform a personality type test. With this information it will be easier for us to guide you through your mood states and find solutions more adequate to your personality.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-center" style="padding:6vh 7vh;">
+                            <img class="svg" src="svg/welcome.svg" style="width:100%; max-width:400px;">
+                        </div>
+                    </div>
+                    <div class="row row-top">
+                        <div class="col col-top">
+                        	<p>You will be provided with advice and techniques to practice and improve your different moods. But remember, change and improvement comes only with work and commitment, it's vital that you take the time to perform this tasks a little bit every day. The best way to keep your daily work is through the notifications system, it's set by default twice a day but you can change it to accommodate your daily preference.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-center" style="padding:5vh 19vh;">
+                            <img class="svg" src="svg/bell.svg" style="width:100%; max-width:150px;">
+                        </div>
+                    </div>
+                    <div class="row row-top">
+                        <div class="col col-top">
+                        	<p>This is the heart of proMood, but there's a lot more! Find extra trainings, use our Chat feature, deal with panic attacks efficiently, and much more.
+                        </div>
+                    </div>
+                    <div class="row row-center" ng-click="continueWelcome();">
+                        <div class="col col-center" style="padding:4vh;">
+                        	<h4 class="font-book custom-1">Got it, let's start!</h4>
+                        </div>
+                    </div>
+
+
+
+                 </div>
+        </ion-scroll>
+      </ion-slide>
+
+      <ion-slide ng-if="step >= 1">
+      	<div class="row row-center height100 margin0 over-bg-n">
+        	<div class="col col-center">
+                <h1>What's<span>your name?</span></h1>
+
+                <label class="home-inputs">
+                  <input dir="ltr" class="home-inputs" placeholder="enter name" ng-model="name" ng-change="changeName(name)" ng-blur="changeNameAndSwipe(name)">
+                </label>
+        	</div>
+        </div>
+        <div class="bottom-bar-fixed"></div>
+      </ion-slide>
+
+      <ion-slide ng-if="step >= 2">
+      	<div class="row row-center height100 margin0 over-bg-w">
+        	<div class="col col-center">
+            <h1>When<span>were you born?</span></h1>
+
+            <label class="home-inputs" ng-if="canUseInputDate">
+              <input dir="ltr" class="home-inputs" type="date" ng-model="bornDate" value="1980-03-01" placeholder="1980-03-01" ng-change="changeBornDate(bornDate)" ng-blur="changeBornDateAndSwipe(bornDate)">
+            </label>
+
+            <div ng-if="!canUseInputDate" class="row">
+              <label class="col-20 home-inputs">
+                <input dir="ltr" class="home-inputs" type="number" min="1" max="31" placeholder="01" ng-model="bornDate.day" ng-change="changeBornDate(bornDate)" ng-blur="changeBornDateAndSwipe(bornDate)">
+              </label>
+
+              <label class="col-10 home-inputs">
+                <input dir="ltr" class="home-inputs" placeholder="." readonly>
+              </label>
+
+              <label class="col-20 home-inputs">
+                <input dir="ltr" class="home-inputs" type="number"  min="1" max="12" placeholder="03" ng-model="bornDate.month" ng-change="changeBornDate(bornDate)" ng-blur="changeBornDateAndSwipe(bornDate)">
+              </label>
+
+              <label class="col-10 home-inputs">
+                <input dir="ltr" class="home-inputs" placeholder="." readonly>
+              </label>
+
+              <label class="home-inputs">
+                <input dir="ltr" class="home-inputs" type="number" min="1800" max="2100" placeholder="1980" ng-model="bornDate.year" ng-change="changeBornDate(bornDate)" ng-blur="changeBornDateAndSwipe(bornDate)">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-bar-fixed"></div>
+      </ion-slide>
+
+      <ion-slide ng-if="step >= 3">
+      	<div class="row row-center height100 margin0 over-bg-g">
+        	<div class="col col-center">
+                <h1>What's<span>your gender?</span></h1>
+
+                <label class="home-inputs">
+                  <select class="home-inputs" ng-model="gender" ng-options="option.value as option.name for option in genders" ng-change="changeGender(gender)"  ng-blur="changeGenderAndSwipe(gender)"></select>
+                </label>
+            </div>
+        </div>
+        <div class="bottom-bar-fixed"></div>
+      </ion-slide>
+
+      <ion-slide ng-if="step >= 4" class="height100 margin0 over-bg-t">
+                <div class="color-bar-title-striped-pink top-44">About the test</div>
+      	<div class="row row-top margin0 padding0">
+        	<div class="col col-top margin0 padding0">
+                <div class="bar bar-header" style="position:relative; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); text-shadow: -1px -1px 1px #ffffff; text-transform: uppercase;">
+                        <h1 class="title">Personality Type</h1>
+                </div>
+            </div>
+        </div>
+        <ion-scroll scroll="auto" class="height100" style="top:0; padding-top:66px;" has-bouncing="false">
+            <div class="row row-top height100">
+                <div class="col">
+                    <p>We will go now through a personality type test. It's of utmost importance that you answer all the questions honestly, and not try to give answers that would depict how you would like to be. The objective is to understand yourself as you really are, not how others expect you to behave. Every personality have ups and downs, none of them define succes in life, what's really important is to know yourself.</p>
+                    <p>As the test starts, you will be shown a series of statements for which you will have to choose between "Yes" or "No". In some of them you might feel it's not an absolute yes or no, just choose the option that comes closer to how you feel about it.</p>
+                    <p><b>Please, bare in mind that the test consists of 72 questions, so a little time and patience is adviced.</b></p>
+                </div>
+            </div>
+        </ion-scroll>
+        <div class="row row-bottom padding0 margin0">
+        	<div class="col col-bottom padding0 margin0">
+        <span ui-sref="personality-test" id="start-button">Start</span>
+        <div class="bottom-bar-fixed"></div>
+ 	       </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

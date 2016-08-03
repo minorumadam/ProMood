@@ -1,0 +1,33 @@
+<ion-view title="<span>Techniques</span>">
+
+    <ion-content scroll="false" has-bouncing="false" class="over-bg-g2">
+        <div class="color-bar-title-striped-pink">Available techniques<span></span></div>
+        <ion-scroll scroll="auto" class="height100 has-subheader" has-bouncing="false">        
+        <div class="row row-center height80" ng-show="$root.showNoTechniques">
+            <div class="col"><p class="tcenter"><strong>Hey there! You currently don't have access to any technics. Please take Personality Test first, in Settings-Redo Personlity Test!</strong></p></div>
+        </div><!-- Task Sin Descripción -->
+        <span ng-repeat="technique in techniques">
+            <div class="row row-center">
+                <div class="col col-center" ng-click="showTechniqueDescription('#techniqueDescription'+$index)">
+                    <div class="tright">
+                        <p class="tcenter bottom-line goals">{{technique.title}} <!--<sup class="close"><i class="icon icon-close" ng-click="removeGoal($index)"></i></sup>-->
+                        </p>
+                    </div>
+                    <span id="techniqueDescription{{$index}}" style="display:none">
+                        <p class="pink tcenter goals" ng-if="technique.subtitle">{{technique.subtitle}}</p>
+                        <p class="pink tcenter goals" ng-if="technique.description">{{technique.description}}</p>
+                        <!--<p class="pink tcenter goals" ng-if="technique.goalDescription">{{technique.goalDescription}}</p>-->
+                        <button class="uppercase goals" ng-click="resumeGoal(technique)">Start</button>
+                    </span>
+                </div>
+            </div>
+        </span>
+        <div class="row last-row"></div>
+        </ion-scroll>
+        <div class="bar bar-footer margin0 padding0">
+            <div class="col col-top margin0 padding0">
+                <div class="bottom-bar-fixed"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

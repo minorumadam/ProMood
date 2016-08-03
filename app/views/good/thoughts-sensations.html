@@ -1,0 +1,23 @@
+
+	<div class="color-bar-title-striped-pink" ng-show="!focusOnTextarea">Your Thoughts<span></span></div>
+    <ion-scroll class="height100 has-subheader over-bg-g2" scroll="auto" on-swipe-right="onSwipeRight()" has-bouncing="false" ng-show="!focusOnTextarea">
+            <div class="row row-top height30">
+                <div class="col col-top">
+                    <p>Finally, we give you the chance to briefly write your thoughts, feelings or any idea that comes to mind at the moment, so that you can read it in the future and inspire yourself to activate your best resources.
+                </div>
+            </div>
+            <div id="textareaDivId" class="row row-center height50 pos-relative">
+                <div class="col col-top height100">
+                    <textarea placeholder="Write here" class="height100 textarea" placeholder="{{!data.thoughts || data.thoughts.length === 0?'Type here':''}}" ng-model="data.thoughts" maxlength="{{dataThoughtsLimit}}" ng-focus="setFocusOnTextarea(true, 'textareaDivId');" ng-blur="setFocusOnTextarea(false, 'textareaDivId');"></textarea>
+                    <span class="post-textarea">{{(dataThoughtsLimit - data.thoughts.length)}} characters left</span>
+                </div>
+            </div>
+            <!--<div class="row last-row"></div>-->
+
+    </ion-scroll>
+    <div class="bar bar-footer margin0 padding0" ng-show="!focusOnTextarea">
+    	<div class="col col-top margin0 padding0">
+			<button class="move" ng-click="goToSummary()">continue</button>
+			<div class="bottom-bar-fixed"></div>
+         </div>
+	</div>

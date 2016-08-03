@@ -1,0 +1,29 @@
+<div class="color-bar-blue-striped">Step Four</div>
+<div class="row row-center">
+  <div class="col col-center">
+    <h5 class="violet">Analyze Your Options</h5>
+    <p>Now read the options that you've written down and make an analysis of what you are in favor or against for each:</p>
+  </div>
+</div>
+<span ng-repeat="option in indecision.options">
+    <div class="row row-bottom">
+      <div class="col col-bottom">
+        <p class="italic bottom-line tcenter">{{option.name}}</p>
+          <div ng-repeat="pro in option.pros" ng-attr-on-last-repeat="{{$parent.$index}}">
+            <textarea placeholder="Pro" class="msd-elastic option pink tcenter text-size min-height-inherit no-bg" placeholder="pro" ng-model="pro.name" rows="1"></textarea>
+          </div>
+          <div ng-repeat="contra in option.contras">
+            <textarea placeholder="Con" class="msd-elastic option violet tcenter text-size min-height-inherit no-bg" placeholder="con" ng-model="contra.name" rows="1"></textarea>
+          </div>
+        </div>
+    </div>
+    <div class="row row-top height15">
+      <div class="col col-top height100">
+        <p class="height100 tcenter">
+          <img class="pink" src="svg/circle-plus.svg" alt=" + " ng-click="indecisionAddPro($index)">
+          <img class="blue" src="svg/circle-minus.svg" alt=" - " ng-click="indecisionAddContra($index)">
+          </p>
+       </div>
+    </div>
+</span>
+<div class="row last-row"></div>
